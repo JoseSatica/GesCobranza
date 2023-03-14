@@ -80,7 +80,7 @@
             this.DgvGestores.AllowUserToAddRows = false;
             this.DgvGestores.AllowUserToDeleteRows = false;
             this.DgvGestores.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DgvGestores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvGestores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DgvGestores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvGestores.BackgroundColor = System.Drawing.Color.White;
             this.DgvGestores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

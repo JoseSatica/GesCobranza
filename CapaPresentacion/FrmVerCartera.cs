@@ -63,6 +63,7 @@ namespace CapaPresentacion
                 LblGestor.Visible = true;
                 CbxGestores.Enabled = true;
                 CbxGestores.Visible = true;
+                BtnAsignarGestor.Enabled = true;
                 usuario = "";
             }
             else
@@ -92,9 +93,7 @@ namespace CapaPresentacion
             comboGestor = NVerCartera.CargarComboGestores();
             foreach (DataRow fila in comboGestor.Rows)
             {
-
                 CbxGestores.Items.Add(fila["cod_gestor"].ToString().Trim());
-
             }
         }
         private void cargarDgvCartera()
@@ -112,7 +111,7 @@ namespace CapaPresentacion
                 nombre = TxtNombre.Text.Trim();
                 paterno = TxtApPaterno.Text.Trim();
                 materno = TxtApMaterno.Text.Trim();
-                gestor = CbxGestores.Text.Trim();
+                gestor = (Variables.tipo_usuario == "JEFE") ? CbxGestores.Text : Variables.cod_usuario;
                 dtpini = Convert.ToDateTime(DtpIni.Value);
                 dtpfin = Convert.ToDateTime(DtpFin.Value);
                 Task tarea = new Task(buscarCartera);
