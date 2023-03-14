@@ -284,7 +284,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmCartera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " SISTEMA DE GESTION DE COBRANZAS - 192.168.3.206";
+            this.Text = " SISTEMA DE GESTION DE COBRANZAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCartera_FormClosing);
             this.Load += new System.EventHandler(this.FrmCartera_Load);
