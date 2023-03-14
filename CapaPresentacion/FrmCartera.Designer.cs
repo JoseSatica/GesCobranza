@@ -43,7 +43,6 @@
             this.BtnCartera = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelFormularios = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.PanelCabecera.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PanelOpciones.SuspendLayout();
@@ -54,7 +53,6 @@
             // 
             this.PanelCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
             this.PanelCabecera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelCabecera.Controls.Add(this.button1);
             this.PanelCabecera.Controls.Add(this.panel2);
             this.PanelCabecera.Controls.Add(this.label6);
             this.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
@@ -268,15 +266,6 @@
             this.PanelFormularios.Size = new System.Drawing.Size(1373, 770);
             this.PanelFormularios.TabIndex = 32;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(130, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FrmCartera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -324,6 +313,5 @@
         public System.Windows.Forms.Panel PanelFormularios;
         private System.Windows.Forms.Button BtnMantenimiento;
         private System.Windows.Forms.Button BtnReporte;
-        private System.Windows.Forms.Button button1;
     }
 }
