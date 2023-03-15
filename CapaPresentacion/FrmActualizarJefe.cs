@@ -104,7 +104,8 @@ namespace CapaPresentacion
 
         }
 
-        private void CbxGestorNuevo_SelectedValueChanged(object sender, EventArgs e)
+
+        private void CbxGestorNuevo_SelectedValueChanged_1(object sender, EventArgs e)
         {
             foreach (DataRow item in comboGestor.Rows)
             {
@@ -112,6 +113,10 @@ namespace CapaPresentacion
                 {
                     id_gestor = Convert.ToInt32(item["id_gestor"].ToString().Trim());
                 }
+            }
+            if (CbxGestorNuevo.SelectedIndex == 0)
+            {
+                CbxGestorNuevo.SelectedIndex = -1;
             }
         }
     }

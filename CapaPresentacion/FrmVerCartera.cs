@@ -50,10 +50,10 @@ namespace CapaPresentacion
         {            
             string fechaSeleccionada = dtpfechacambio.Text;
             int idcartera = Convert.ToInt32(DgvCartera.Rows[rowIndex].Cells["id_cartera"].Value.ToString());
-            string codigo = DgvCartera.Rows[rowIndex].Cells["Codigo"].Value.ToString();
+            string code = DgvCartera.Rows[rowIndex].Cells["Codigo"].Value.ToString();
             int iddetallecartera = Convert.ToInt32(DgvCartera.Rows[rowIndex].Cells["id_detalle_cartera"].Value.ToString());
-            NVerCartera.ActualizarFechaAGestionar(iddetallecartera,idcartera, fechaSeleccionada);
-            cargarDgvCartera();
+            NVerCartera.ActualizarFechaAGestionar(idcartera, fechaSeleccionada);
+            //cargarDgvCartera();
             pintarFilas();
         }
         private void verificarJefe()
@@ -134,14 +134,8 @@ namespace CapaPresentacion
             if (Cartera != null )
             {
                 Cartera.Rows.Clear();
-            }
-            if (PtbLoad.InvokeRequired)
-            {
-                PtbLoad.Invoke(new MethodInvoker(() =>
-                {                                        
-                    Cartera = NVerCartera.BuscarCartera(codigo, estado, seguimiento, nombre, paterno, materno, gestor, dtpini, dtpfin);                    
-                }));
-            }
+            }                                       
+            Cartera = NVerCartera.BuscarCartera(codigo, estado, seguimiento, nombre, paterno, materno, gestor, dtpini, dtpfin);                               
         }
         private void Limpiar()
         {
@@ -444,6 +438,30 @@ namespace CapaPresentacion
         private void eDITARFECHAAGESTIONARToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CbxEstado_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxEstado.SelectedIndex == 0)
+            {
+                CbxEstado.SelectedIndex = -1;
+            }
+        }
+
+        private void CbxSeguimiento_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxSeguimiento.SelectedIndex == 0)
+            {
+                CbxSeguimiento.SelectedIndex = -1;
+            }
+        }
+
+        private void CbxGestores_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxGestores.SelectedIndex == 0)
+            {
+                CbxGestores.SelectedIndex = -1;
+            }
         }
     }
 }

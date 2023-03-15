@@ -46,17 +46,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void CbxUsuarios_SelectedValueChanged(object sender, EventArgs e)
-        {
-            foreach (DataRow item in usuarios.Rows)
-            {
-                string nombreUsuario = item["nombre"].ToString().Trim();
-                if (nombreUsuario == CbxUsuarios.Text.Trim())
-                {
-                    id_usuario = item["id_usuario"].ToString().Trim();
-                }
-            }
-        }
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -180,6 +169,22 @@ namespace CapaPresentacion
             catch (Exception ex)
             {
                 MessageBox.Show($"SE PRODUJO EL SIGUIENTE ERROR: \n{ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void CbxUsuarios_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            foreach (DataRow item in usuarios.Rows)
+            {
+                string nombreUsuario = item["nombre"].ToString().Trim();
+                if (nombreUsuario == CbxUsuarios.Text.Trim())
+                {
+                    id_usuario = item["id_usuario"].ToString().Trim();
+                }
+            }
+            if (CbxUsuarios.SelectedIndex == 0)
+            {
+                CbxUsuarios.SelectedIndex = -1;
             }
         }
     }

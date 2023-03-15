@@ -40,10 +40,10 @@ namespace CapaNegocio
             DVerCartera Datos = new DVerCartera();
             return Datos.ActualizarMontoRefrescar(id_cartera, monto);
         }
-        public static string ActualizarFechaAGestionar(int id_detalle_cartera,int id_cartera, string fecha_a_gestionar)
+        public static string ActualizarFechaAGestionar(int id_cartera, string fecha_a_gestionar)
         {
             DVerCartera Datos = new DVerCartera();
-            return Datos.ActualizarFechaAGestionar(id_detalle_cartera,id_cartera, fecha_a_gestionar);
+            return Datos.ActualizarFechaAGestionar(id_cartera, fecha_a_gestionar);
         }
     }
 }

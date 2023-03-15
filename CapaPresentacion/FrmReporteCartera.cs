@@ -172,5 +172,29 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void CbxEstado_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxEstado.SelectedIndex == 0)
+            {
+                CbxEstado.SelectedIndex = -1;
+            }
+        }
+
+        private void CbxSeguimiento_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxSeguimiento.SelectedIndex == 0)
+            {
+                CbxSeguimiento.SelectedIndex = -1;
+            }
+        }
+
+        private void CbxGestores_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxGestores.SelectedIndex == 0)
+            {
+                CbxGestores.SelectedIndex = -1;
+            }
+        }
     }
 }

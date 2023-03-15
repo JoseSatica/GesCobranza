@@ -93,5 +93,13 @@ namespace CapaPresentacion
             TipAyuda.SetToolTip(this.BtnBuscar, "REALIZARA LA BUSQUEDA CON LOS CRITERIOS DE FECHA Y GESTOR SELECCIONADOS");
             TipAyuda.Hide(BtnBuscar);
         }
+
+        private void CbxGestor_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CbxGestor.SelectedIndex == 0)
+            {
+                CbxGestor.SelectedIndex = -1;
+            }
+        }
     }
 }

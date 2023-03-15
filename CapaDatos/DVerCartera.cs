@@ -188,7 +188,7 @@ namespace CapaDatos
             }
             return Rpta;
         }
-        public string ActualizarFechaAGestionar(int id_cartera_detalle,int id_cartera, string fecha_a_gestionar)
+        public string ActualizarFechaAGestionar(int id_cartera, string fecha_a_gestionar)
         {
             string Rpta = "";
 
@@ -199,9 +199,8 @@ namespace CapaDatos
                 Sqlcon = Conexion.getInstancia().CrearConexion();
                 SqlCommand comando = new SqlCommand("Gestion.GestionCartera", Sqlcon);
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@buscar", SqlDbType.Int).Value = 13;
-                comando.Parameters.Add("@id_detalle_cartera", SqlDbType.VarChar).Value = id_cartera_detalle;
-                comando.Parameters.Add("@id_cartera", SqlDbType.VarChar).Value = id_cartera;
+                comando.Parameters.Add("@buscar", SqlDbType.Int).Value = 13;               
+                comando.Parameters.Add("@id_cartera", SqlDbType.Int).Value = id_cartera;
                 comando.Parameters.Add("@fecha_por_gestionar", SqlDbType.VarChar).Value = fecha_a_gestionar;
 
                 Sqlcon.Open();

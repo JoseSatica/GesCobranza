@@ -32,11 +32,11 @@ namespace CapaPresentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAcceder = new System.Windows.Forms.Button();
-            this.TxtClave = new System.Windows.Forms.TextBox();
-            this.TxtCodUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TxtCodUsuario = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TxtClave = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,27 +70,6 @@ namespace CapaPresentacion
             this.BtnAcceder.UseVisualStyleBackColor = false;
             this.BtnAcceder.Click += new System.EventHandler(this.BtnAcceder_Click);
             // 
-            // TxtClave
-            // 
-            this.TxtClave.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtClave.Location = new System.Drawing.Point(84, 182);
-            this.TxtClave.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtClave.Name = "TxtClave";
-            this.TxtClave.PasswordChar = '*';
-            this.TxtClave.Size = new System.Drawing.Size(180, 26);
-            this.TxtClave.TabIndex = 15;
-            this.TxtClave.Text = "satica";
-            // 
-            // TxtCodUsuario
-            // 
-            this.TxtCodUsuario.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodUsuario.Location = new System.Drawing.Point(84, 133);
-            this.TxtCodUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtCodUsuario.Name = "TxtCodUsuario";
-            this.TxtCodUsuario.Size = new System.Drawing.Size(180, 26);
-            this.TxtCodUsuario.TabIndex = 14;
-            this.TxtCodUsuario.Text = "jmozo";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.blindaje;
@@ -123,19 +102,54 @@ namespace CapaPresentacion
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
+            // TxtCodUsuario
+            // 
+            // 
+            // 
+            // 
+            this.TxtCodUsuario.Border.Class = "TextBoxBorder";
+            this.TxtCodUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtCodUsuario.FocusHighlightEnabled = true;
+            this.TxtCodUsuario.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodUsuario.Location = new System.Drawing.Point(84, 134);
+            this.TxtCodUsuario.Name = "TxtCodUsuario";
+            this.TxtCodUsuario.PreventEnterBeep = true;
+            this.TxtCodUsuario.Size = new System.Drawing.Size(179, 25);
+            this.TxtCodUsuario.TabIndex = 21;
+            this.TxtCodUsuario.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodUsuario.WatermarkText = "Usuario";
+            // 
+            // TxtClave
+            // 
+            // 
+            // 
+            // 
+            this.TxtClave.Border.Class = "TextBoxBorder";
+            this.TxtClave.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtClave.FocusHighlightEnabled = true;
+            this.TxtClave.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClave.Location = new System.Drawing.Point(84, 183);
+            this.TxtClave.Name = "TxtClave";
+            this.TxtClave.PasswordChar = '*';
+            this.TxtClave.PreventEnterBeep = true;
+            this.TxtClave.Size = new System.Drawing.Size(179, 25);
+            this.TxtClave.TabIndex = 22;
+            this.TxtClave.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClave.WatermarkText = "Contraseña";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(311, 289);
+            this.Controls.Add(this.TxtClave);
+            this.Controls.Add(this.TxtCodUsuario);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAcceder);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.TxtClave);
-            this.Controls.Add(this.TxtCodUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -147,7 +161,6 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -156,9 +169,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnAcceder;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox TxtClave;
-        private System.Windows.Forms.TextBox TxtCodUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtCodUsuario;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtClave;
     }
 }

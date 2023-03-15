@@ -178,18 +178,7 @@ namespace CapaPresentacion
             //    }));
             //}
         }
-
-        private void CbxGestores_SelectedValueChanged(object sender, EventArgs e)
-        {
-            foreach (DataRow item in comboGestor.Rows)
-            {
-                if (CbxGestores.Text == item["cod_gestor"].ToString())
-                {
-                    id_gestor = Convert.ToInt32(item["id_gestor"].ToString());
-                    cod_gestor = CbxGestores.Text;
-                }
-            }
-        }
+       
         private void BtnArchivo_MouseHover(object sender, EventArgs e)
         {
             TipAyuda.AutoPopDelay = 4000;
@@ -243,8 +232,24 @@ namespace CapaPresentacion
                 MessageBox.Show($"SE PRODUJO UN ERROR: \n{ex}","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
         }
+ 
+        private void CbxGestores_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            foreach (DataRow item in comboGestor.Rows)
+            {
+                if (CbxGestores.Text == item["cod_gestor"].ToString())
+                {
+                    id_gestor = Convert.ToInt32(item["id_gestor"].ToString());
+                    cod_gestor = CbxGestores.Text;
+                }
+            }
+            if (CbxGestores.SelectedIndex ==0)
+            {
+                CbxGestores.SelectedIndex = -1;
+            }
+        }
 
-        private void cbxGestorAntiguoCambiar_SelectedValueChanged(object sender, EventArgs e)
+        private void cbxGestorAntiguoCambiar_SelectedValueChanged_1(object sender, EventArgs e)
         {
             foreach (DataRow item in comboGestorAntiguo.Rows)
             {
@@ -253,9 +258,13 @@ namespace CapaPresentacion
                     id_gestor_antiguo = Convert.ToInt32(item["id_gestor"].ToString());
                 }
             }
+            if (cbxGestorAntiguoCambiar.SelectedIndex == 0)
+            {
+                cbxGestorAntiguoCambiar.SelectedIndex = -1;
+            }
         }
 
-        private void cbxGestorNuevoCambiar_SelectedValueChanged(object sender, EventArgs e)
+        private void cbxGestorNuevoCambiar_SelectedValueChanged_1(object sender, EventArgs e)
         {
             foreach (DataRow item in comboGestorNuevo.Rows)
             {
@@ -263,6 +272,10 @@ namespace CapaPresentacion
                 {
                     id_gestor_nuevo = Convert.ToInt32(item["id_gestor"].ToString());
                 }
+            }
+            if (cbxGestorNuevoCambiar.SelectedIndex == 0)
+            {
+                cbxGestorNuevoCambiar.SelectedIndex = -1;
             }
         }
     }

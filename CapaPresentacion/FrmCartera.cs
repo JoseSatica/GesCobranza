@@ -70,11 +70,11 @@ namespace CapaPresentacion
             PanelFormularios.Controls.Remove((Control)sender);
             FrmCarteraGestionDetalle formB = new FrmCarteraGestionDetalle();
             formB.TopLevel = false;
-            formB.Dock = DockStyle.Fill;
             PanelFormularios.Controls.Add(formB);
             PanelFormularios.Tag = formB;
-            formB.BringToFront();
             formB.Dock = DockStyle.Fill;
+            formB.BringToFront();
+            //formB.Dock = DockStyle.Fill;
             formB.Show();
         }
         private void MostrarDetalleDeuda(object sender, EventArgs e)
@@ -94,9 +94,9 @@ namespace CapaPresentacion
             PanelFormularios.Controls.Remove((Control)sender);
             FrmCarteraDetalle carteraDetalle = new FrmCarteraDetalle();
             carteraDetalle.TopLevel = false;
-            carteraDetalle.Dock = DockStyle.Fill;
             PanelFormularios.Controls.Add(carteraDetalle);
             PanelFormularios.Tag = carteraDetalle;
+            carteraDetalle.Dock = DockStyle.Fill;
             carteraDetalle.BringToFront();
             carteraDetalle.Show();
         }

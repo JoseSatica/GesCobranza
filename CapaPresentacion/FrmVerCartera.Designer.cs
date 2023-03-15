@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnDetalleGestion = new System.Windows.Forms.Button();
             this.BtnAsignarGestor = new System.Windows.Forms.Button();
-            this.CbxGestores = new System.Windows.Forms.ComboBox();
             this.LblGestor = new System.Windows.Forms.Label();
             this.BtnRefrescar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.DtpIni = new System.Windows.Forms.DateTimePicker();
             this.DtpFin = new System.Windows.Forms.DateTimePicker();
             this.LblHasta = new System.Windows.Forms.Label();
-            this.CbxEstado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CbxSeguimiento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,10 +62,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TipAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TxtApMaterno = new PlaceholderTextBox.PlaceholderTextBox();
-            this.TxtApPaterno = new PlaceholderTextBox.PlaceholderTextBox();
-            this.TxtNombre = new PlaceholderTextBox.PlaceholderTextBox();
-            this.TxtCodigo = new PlaceholderTextBox.PlaceholderTextBox();
+            this.CbxGestores = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.CbxSeguimiento = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.CbxEstado = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.TxtApMaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TxtApPaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TxtNombre = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TxtCodigo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCartera)).BeginInit();
             this.CmsMenuOpciones.SuspendLayout();
@@ -85,7 +88,7 @@
             // 
             this.BtnDetalleGestion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnDetalleGestion.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnDetalleGestion.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDetalleGestion.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDetalleGestion.ForeColor = System.Drawing.Color.Black;
             this.BtnDetalleGestion.Location = new System.Drawing.Point(248, 33);
             this.BtnDetalleGestion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -102,7 +105,7 @@
             this.BtnAsignarGestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnAsignarGestor.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnAsignarGestor.Enabled = false;
-            this.BtnAsignarGestor.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAsignarGestor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAsignarGestor.ForeColor = System.Drawing.Color.Black;
             this.BtnAsignarGestor.Location = new System.Drawing.Point(1012, 33);
             this.BtnAsignarGestor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -114,31 +117,16 @@
             this.BtnAsignarGestor.Click += new System.EventHandler(this.BtnAsignarGestor_Click_1);
             this.BtnAsignarGestor.MouseHover += new System.EventHandler(this.BtnAsignarGestor_MouseHover);
             // 
-            // CbxGestores
-            // 
-            this.CbxGestores.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CbxGestores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxGestores.Enabled = false;
-            this.CbxGestores.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbxGestores.FormattingEnabled = true;
-            this.CbxGestores.Items.AddRange(new object[] {
-            ""});
-            this.CbxGestores.Location = new System.Drawing.Point(942, 20);
-            this.CbxGestores.Name = "CbxGestores";
-            this.CbxGestores.Size = new System.Drawing.Size(190, 23);
-            this.CbxGestores.TabIndex = 52;
-            this.CbxGestores.Visible = false;
-            // 
             // LblGestor
             // 
             this.LblGestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblGestor.AutoSize = true;
-            this.LblGestor.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGestor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGestor.ForeColor = System.Drawing.Color.White;
-            this.LblGestor.Location = new System.Drawing.Point(885, 28);
+            this.LblGestor.Location = new System.Drawing.Point(910, 32);
             this.LblGestor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGestor.Name = "LblGestor";
-            this.LblGestor.Size = new System.Drawing.Size(56, 15);
+            this.LblGestor.Size = new System.Drawing.Size(65, 17);
             this.LblGestor.TabIndex = 48;
             this.LblGestor.Text = "GESTOR:";
             this.LblGestor.Visible = false;
@@ -147,7 +135,7 @@
             // 
             this.BtnRefrescar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnRefrescar.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnRefrescar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefrescar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRefrescar.ForeColor = System.Drawing.Color.Black;
             this.BtnRefrescar.Location = new System.Drawing.Point(9, 33);
             this.BtnRefrescar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -163,9 +151,9 @@
             // 
             this.BtnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnLimpiar.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnLimpiar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.BtnLimpiar.Location = new System.Drawing.Point(487, 96);
+            this.BtnLimpiar.Location = new System.Drawing.Point(498, 101);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(103, 49);
@@ -178,12 +166,12 @@
             // 
             this.LblDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblDesde.AutoSize = true;
-            this.LblDesde.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDesde.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDesde.ForeColor = System.Drawing.Color.White;
-            this.LblDesde.Location = new System.Drawing.Point(12, 29);
+            this.LblDesde.Location = new System.Drawing.Point(17, 29);
             this.LblDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDesde.Name = "LblDesde";
-            this.LblDesde.Size = new System.Drawing.Size(43, 14);
+            this.LblDesde.Size = new System.Drawing.Size(53, 17);
             this.LblDesde.TabIndex = 15;
             this.LblDesde.Text = "DESDE";
             // 
@@ -191,63 +179,49 @@
             // 
             this.DtpIni.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DtpIni.Checked = false;
-            this.DtpIni.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpIni.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpIni.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpIni.Location = new System.Drawing.Point(63, 22);
+            this.DtpIni.Location = new System.Drawing.Point(69, 23);
             this.DtpIni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DtpIni.Name = "DtpIni";
-            this.DtpIni.Size = new System.Drawing.Size(87, 22);
+            this.DtpIni.Size = new System.Drawing.Size(97, 25);
             this.DtpIni.TabIndex = 10;
             // 
             // DtpFin
             // 
             this.DtpFin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DtpFin.Checked = false;
-            this.DtpFin.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpFin.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(217, 21);
+            this.DtpFin.Location = new System.Drawing.Point(233, 23);
             this.DtpFin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DtpFin.Name = "DtpFin";
-            this.DtpFin.Size = new System.Drawing.Size(88, 22);
+            this.DtpFin.Size = new System.Drawing.Size(97, 25);
             this.DtpFin.TabIndex = 17;
             // 
             // LblHasta
             // 
             this.LblHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblHasta.AutoSize = true;
-            this.LblHasta.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHasta.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHasta.ForeColor = System.Drawing.Color.White;
-            this.LblHasta.Location = new System.Drawing.Point(169, 28);
+            this.LblHasta.Location = new System.Drawing.Point(174, 29);
             this.LblHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblHasta.Name = "LblHasta";
-            this.LblHasta.Size = new System.Drawing.Size(45, 14);
+            this.LblHasta.Size = new System.Drawing.Size(51, 17);
             this.LblHasta.TabIndex = 16;
             this.LblHasta.Text = "HASTA";
-            // 
-            // CbxEstado
-            // 
-            this.CbxEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbxEstado.FormattingEnabled = true;
-            this.CbxEstado.Items.AddRange(new object[] {
-            ""});
-            this.CbxEstado.Location = new System.Drawing.Point(679, 20);
-            this.CbxEstado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.CbxEstado.Name = "CbxEstado";
-            this.CbxEstado.Size = new System.Drawing.Size(191, 23);
-            this.CbxEstado.TabIndex = 47;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(585, 28);
+            this.label8.Location = new System.Drawing.Point(603, 32);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 15);
+            this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 46;
             this.label8.Text = "ESTADO:";
             // 
@@ -255,9 +229,9 @@
             // 
             this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnBuscar.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnBuscar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BtnBuscar.Location = new System.Drawing.Point(378, 96);
+            this.BtnBuscar.Location = new System.Drawing.Point(389, 101);
             this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(101, 50);
@@ -270,12 +244,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(35, 67);
+            this.label2.Location = new System.Drawing.Point(7, 70);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 42;
             this.label2.Text = "NOMBRE:";
             // 
@@ -283,12 +257,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 28);
+            this.label1.Location = new System.Drawing.Point(7, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 41;
             this.label1.Text = "CODIGO:";
             // 
@@ -296,7 +270,7 @@
             // 
             this.BtnActuaGest.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnActuaGest.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnActuaGest.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActuaGest.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActuaGest.ForeColor = System.Drawing.Color.Black;
             this.BtnActuaGest.Location = new System.Drawing.Point(768, 33);
             this.BtnActuaGest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -312,7 +286,7 @@
             // 
             this.BtnVerDeuda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnVerDeuda.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnVerDeuda.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVerDeuda.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVerDeuda.ForeColor = System.Drawing.Color.Black;
             this.BtnVerDeuda.Location = new System.Drawing.Point(510, 33);
             this.BtnVerDeuda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -336,7 +310,7 @@
             this.DgvCartera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -393,12 +367,12 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(287, 66);
+            this.label3.Location = new System.Drawing.Point(287, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 15);
+            this.label3.Size = new System.Drawing.Size(101, 17);
             this.label3.TabIndex = 56;
             this.label3.Text = "AP. MATERNO:";
             // 
@@ -406,12 +380,12 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(287, 28);
+            this.label4.Location = new System.Drawing.Point(287, 33);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 15);
+            this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 58;
             this.label4.Text = "AP. PATERNO:";
             // 
@@ -422,39 +396,25 @@
             this.groupBox1.Controls.Add(this.DtpIni);
             this.groupBox1.Controls.Add(this.LblHasta);
             this.groupBox1.Controls.Add(this.DtpFin);
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(38, 88);
+            this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 60);
+            this.groupBox1.Size = new System.Drawing.Size(343, 60);
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FECHA";
             this.groupBox1.MouseHover += new System.EventHandler(this.groupBox1_MouseHover);
             // 
-            // CbxSeguimiento
-            // 
-            this.CbxSeguimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CbxSeguimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxSeguimiento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbxSeguimiento.FormattingEnabled = true;
-            this.CbxSeguimiento.Items.AddRange(new object[] {
-            ""});
-            this.CbxSeguimiento.Location = new System.Drawing.Point(681, 58);
-            this.CbxSeguimiento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.CbxSeguimiento.Name = "CbxSeguimiento";
-            this.CbxSeguimiento.Size = new System.Drawing.Size(191, 23);
-            this.CbxSeguimiento.TabIndex = 62;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(585, 66);
+            this.label5.Location = new System.Drawing.Point(603, 67);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 15);
+            this.label5.Size = new System.Drawing.Size(107, 17);
             this.label5.TabIndex = 61;
             this.label5.Text = "SEGUIMIENTO:";
             // 
@@ -470,7 +430,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.ForestGreen;
-            this.pictureBox2.Location = new System.Drawing.Point(145, 92);
+            this.pictureBox2.Location = new System.Drawing.Point(161, 92);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 19);
             this.pictureBox2.TabIndex = 64;
@@ -479,7 +439,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pictureBox3.Location = new System.Drawing.Point(290, 92);
+            this.pictureBox3.Location = new System.Drawing.Point(322, 92);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 19);
             this.pictureBox3.TabIndex = 65;
@@ -489,12 +449,12 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(30, 97);
+            this.label6.Location = new System.Drawing.Point(27, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 15);
+            this.label6.Size = new System.Drawing.Size(122, 17);
             this.label6.TabIndex = 66;
             this.label6.Text = "FUERA DE PLAZO";
             // 
@@ -502,12 +462,12 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(168, 97);
+            this.label7.Location = new System.Drawing.Point(184, 94);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 15);
+            this.label7.Size = new System.Drawing.Size(129, 17);
             this.label7.TabIndex = 67;
             this.label7.Text = "ANTES DEL PLAZO";
             // 
@@ -515,12 +475,12 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(313, 97);
+            this.label9.Location = new System.Drawing.Point(345, 94);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 15);
+            this.label9.Size = new System.Drawing.Size(164, 17);
             this.label9.TabIndex = 68;
             this.label9.Text = "ULTIMO DIA DEL PLAZO";
             // 
@@ -536,70 +496,165 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Controls.Add(this.CbxGestores);
+            this.groupBox2.Controls.Add(this.CbxSeguimiento);
+            this.groupBox2.Controls.Add(this.CbxEstado);
             this.groupBox2.Controls.Add(this.TxtApMaterno);
             this.groupBox2.Controls.Add(this.TxtApPaterno);
             this.groupBox2.Controls.Add(this.TxtNombre);
             this.groupBox2.Controls.Add(this.TxtCodigo);
-            this.groupBox2.Controls.Add(this.CbxSeguimiento);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.CbxGestores);
             this.groupBox2.Controls.Add(this.LblGestor);
             this.groupBox2.Controls.Add(this.BtnLimpiar);
-            this.groupBox2.Controls.Add(this.CbxEstado);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.BtnBuscar);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1178, 156);
+            this.groupBox2.Size = new System.Drawing.Size(1178, 166);
             this.groupBox2.TabIndex = 69;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CRITERIOS DE BUSQUEDA";
             // 
+            // CbxGestores
+            // 
+            this.CbxGestores.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CbxGestores.DisplayMember = "Text";
+            this.CbxGestores.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbxGestores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxGestores.FocusHighlightEnabled = true;
+            this.CbxGestores.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxGestores.FormattingEnabled = true;
+            this.CbxGestores.ItemHeight = 20;
+            this.CbxGestores.Items.AddRange(new object[] {
+            this.comboItem3});
+            this.CbxGestores.Location = new System.Drawing.Point(978, 24);
+            this.CbxGestores.Name = "CbxGestores";
+            this.CbxGestores.Size = new System.Drawing.Size(193, 26);
+            this.CbxGestores.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CbxGestores.TabIndex = 73;
+            this.CbxGestores.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxGestores.WatermarkText = "Todos";
+            this.CbxGestores.SelectedValueChanged += new System.EventHandler(this.CbxGestores_SelectedValueChanged);
+            // 
+            // CbxSeguimiento
+            // 
+            this.CbxSeguimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CbxSeguimiento.DisplayMember = "Text";
+            this.CbxSeguimiento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbxSeguimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxSeguimiento.FocusHighlightEnabled = true;
+            this.CbxSeguimiento.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxSeguimiento.FormattingEnabled = true;
+            this.CbxSeguimiento.ItemHeight = 20;
+            this.CbxSeguimiento.Items.AddRange(new object[] {
+            this.comboItem2});
+            this.CbxSeguimiento.Location = new System.Drawing.Point(710, 61);
+            this.CbxSeguimiento.Name = "CbxSeguimiento";
+            this.CbxSeguimiento.Size = new System.Drawing.Size(193, 26);
+            this.CbxSeguimiento.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CbxSeguimiento.TabIndex = 72;
+            this.CbxSeguimiento.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxSeguimiento.WatermarkText = "Todos";
+            this.CbxSeguimiento.SelectedValueChanged += new System.EventHandler(this.CbxSeguimiento_SelectedValueChanged);
+            // 
+            // CbxEstado
+            // 
+            this.CbxEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CbxEstado.DisplayMember = "Text";
+            this.CbxEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxEstado.FocusHighlightEnabled = true;
+            this.CbxEstado.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxEstado.FormattingEnabled = true;
+            this.CbxEstado.ItemHeight = 20;
+            this.CbxEstado.Items.AddRange(new object[] {
+            this.comboItem1});
+            this.CbxEstado.Location = new System.Drawing.Point(710, 24);
+            this.CbxEstado.Name = "CbxEstado";
+            this.CbxEstado.Size = new System.Drawing.Size(193, 26);
+            this.CbxEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CbxEstado.TabIndex = 71;
+            this.CbxEstado.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxEstado.WatermarkText = "Todos";
+            this.CbxEstado.SelectedValueChanged += new System.EventHandler(this.CbxEstado_SelectedValueChanged);
+            // 
             // TxtApMaterno
             // 
             this.TxtApMaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtApMaterno.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApMaterno.Location = new System.Drawing.Point(378, 58);
+            // 
+            // 
+            // 
+            this.TxtApMaterno.Border.Class = "TextBoxBorder";
+            this.TxtApMaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtApMaterno.FocusHighlightEnabled = true;
+            this.TxtApMaterno.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApMaterno.Location = new System.Drawing.Point(391, 61);
             this.TxtApMaterno.Name = "TxtApMaterno";
-            this.TxtApMaterno.PlaceholderText = "Apellido Materno Contribuyente";
-            this.TxtApMaterno.Size = new System.Drawing.Size(196, 23);
-            this.TxtApMaterno.TabIndex = 66;
+            this.TxtApMaterno.PreventEnterBeep = true;
+            this.TxtApMaterno.Size = new System.Drawing.Size(193, 25);
+            this.TxtApMaterno.TabIndex = 70;
+            this.TxtApMaterno.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApMaterno.WatermarkText = "Apellido Materno";
             // 
             // TxtApPaterno
             // 
             this.TxtApPaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtApPaterno.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApPaterno.Location = new System.Drawing.Point(378, 22);
+            // 
+            // 
+            // 
+            this.TxtApPaterno.Border.Class = "TextBoxBorder";
+            this.TxtApPaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtApPaterno.FocusHighlightEnabled = true;
+            this.TxtApPaterno.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApPaterno.Location = new System.Drawing.Point(391, 26);
             this.TxtApPaterno.Name = "TxtApPaterno";
-            this.TxtApPaterno.PlaceholderText = "Apellido Paterno Contribuyente";
-            this.TxtApPaterno.Size = new System.Drawing.Size(196, 23);
-            this.TxtApPaterno.TabIndex = 65;
+            this.TxtApPaterno.PreventEnterBeep = true;
+            this.TxtApPaterno.Size = new System.Drawing.Size(193, 25);
+            this.TxtApPaterno.TabIndex = 69;
+            this.TxtApPaterno.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApPaterno.WatermarkText = "Apellido Paterno";
             // 
             // TxtNombre
             // 
             this.TxtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtNombre.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(100, 59);
+            // 
+            // 
+            // 
+            this.TxtNombre.Border.Class = "TextBoxBorder";
+            this.TxtNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtNombre.FocusHighlightEnabled = true;
+            this.TxtNombre.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(78, 61);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.PlaceholderText = "Nombre Contribuyente";
-            this.TxtNombre.Size = new System.Drawing.Size(180, 23);
-            this.TxtNombre.TabIndex = 64;
+            this.TxtNombre.PreventEnterBeep = true;
+            this.TxtNombre.Size = new System.Drawing.Size(193, 25);
+            this.TxtNombre.TabIndex = 68;
+            this.TxtNombre.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.WatermarkText = "Nombre Contribuyente";
             // 
             // TxtCodigo
             // 
             this.TxtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtCodigo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigo.Location = new System.Drawing.Point(101, 22);
+            // 
+            // 
+            // 
+            this.TxtCodigo.Border.Class = "TextBoxBorder";
+            this.TxtCodigo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TxtCodigo.FocusHighlightEnabled = true;
+            this.TxtCodigo.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.Location = new System.Drawing.Point(78, 23);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.PlaceholderText = "Codigo Contribuyente";
-            this.TxtCodigo.Size = new System.Drawing.Size(180, 23);
-            this.TxtCodigo.TabIndex = 63;
+            this.TxtCodigo.PreventEnterBeep = true;
+            this.TxtCodigo.Size = new System.Drawing.Size(193, 25);
+            this.TxtCodigo.TabIndex = 67;
+            this.TxtCodigo.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.WatermarkText = "Codigo Contribuyente";
             // 
             // groupBox3
             // 
@@ -617,7 +672,7 @@
             this.groupBox3.Controls.Add(this.BtnRefrescar);
             this.groupBox3.Controls.Add(this.BtnActuaGest);
             this.groupBox3.Controls.Add(this.BtnVerDeuda);
-            this.groupBox3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(7, 176);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1178, 468);
@@ -661,7 +716,6 @@
         #endregion
         private System.Windows.Forms.Button BtnDetalleGestion;
         private System.Windows.Forms.Button BtnAsignarGestor;
-        private System.Windows.Forms.ComboBox CbxGestores;
         public System.Windows.Forms.Label LblGestor;
         private System.Windows.Forms.Button BtnRefrescar;
         private System.Windows.Forms.Button BtnLimpiar;
@@ -669,7 +723,6 @@
         private System.Windows.Forms.DateTimePicker DtpIni;
         private System.Windows.Forms.Label LblHasta;
         private System.Windows.Forms.DateTimePicker DtpFin;
-        private System.Windows.Forms.ComboBox CbxEstado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label label2;
@@ -680,7 +733,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox CbxSeguimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -694,9 +746,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.PictureBox PtbLoad;
         public System.Windows.Forms.GroupBox groupBox3;
-        private PlaceholderTextBox.PlaceholderTextBox TxtApMaterno;
-        private PlaceholderTextBox.PlaceholderTextBox TxtApPaterno;
-        private PlaceholderTextBox.PlaceholderTextBox TxtNombre;
-        private PlaceholderTextBox.PlaceholderTextBox TxtCodigo;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CbxEstado;
+        private DevComponents.Editors.ComboItem comboItem1;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtApMaterno;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtApPaterno;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtNombre;
+        private DevComponents.DotNetBar.Controls.TextBoxX TxtCodigo;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CbxSeguimiento;
+        private DevComponents.Editors.ComboItem comboItem2;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CbxGestores;
+        private DevComponents.Editors.ComboItem comboItem3;
     }
 }

@@ -73,8 +73,6 @@ namespace CapaPresentacion
                 DialogResult resultado = MessageBox.Show("¿DESEA ACTUALIZAR SU GESTION?", "SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
                 {
-
-
                     try
                     {
                         Task Tarea = new Task(CompararMonto);
@@ -184,16 +182,7 @@ namespace CapaPresentacion
 
         }
 
-        private void CbxSeguimiento_SelectedValueChanged(object sender, EventArgs e)
-        {
-            foreach (DataRow item in comboSeguimiento.Rows)
-            {
-                if (CbxSeguimiento.Text == item["deta_seguimiento"].ToString().Trim())
-                {
-                    actualizaIdSeguimiento = Convert.ToInt32(item["id_seguimiento"].ToString());
-                }
-            }
-        }
+      
 
         private void gbxPersona_MouseHover(object sender, EventArgs e)
         {
@@ -230,6 +219,21 @@ namespace CapaPresentacion
         private void BtnGrabar_MouseHover(object sender, EventArgs e)
         {
             TipAyuda.SetToolTip(this.BtnGrabar, "BOTON QUE PERMITIRA ACTUALIZAR LA GESTION REALIZADA POR EL GESTOR Y GUARDAR REGISTRO DE ELLO");
+        }
+
+        private void CbxSeguimiento_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            foreach (DataRow item in comboSeguimiento.Rows)
+            {
+                if (CbxSeguimiento.Text == item["deta_seguimiento"].ToString().Trim())
+                {
+                    actualizaIdSeguimiento = Convert.ToInt32(item["id_seguimiento"].ToString());
+                }
+            }
+            if (CbxSeguimiento.SelectedIndex == 0)
+            {
+                CbxSeguimiento.SelectedIndex = -1;
+            }
         }
     }
 }
