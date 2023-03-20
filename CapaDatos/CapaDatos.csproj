@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DAsignarMasivo.cs" />
+    <Compile Include="DCargoNotificacion.cs" />
     <Compile Include="DCarteraDetalle.cs" />
     <Compile Include="DGestion.cs" />
     <Compile Include="DIngresoPorGestor.cs" />

@@ -362,7 +362,7 @@
             this.LblNumRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
             this.LblNumRegistro.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumRegistro.ForeColor = System.Drawing.Color.White;
-            this.LblNumRegistro.Location = new System.Drawing.Point(149, 183);
+            this.LblNumRegistro.Location = new System.Drawing.Point(158, 183);
             this.LblNumRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumRegistro.Name = "LblNumRegistro";
             this.LblNumRegistro.Size = new System.Drawing.Size(21, 17);
