@@ -55,6 +55,7 @@
             this.EpSeguimiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.EpObservacion = new System.Windows.Forms.ErrorProvider(this.components);
             this.TipAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbxPersona.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -409,6 +410,20 @@
             this.TipAyuda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.TipAyuda.ToolTipTitle = "Info";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(1070, 493);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(104, 59);
+            this.btnSalir.TabIndex = 72;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
             // FrmCarteraGestionDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +431,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(1203, 583);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxPersona);
@@ -464,5 +480,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX TxtObserNoti;
         private DevComponents.DotNetBar.Controls.ComboBoxEx CbxSeguimiento;
         private DevComponents.Editors.ComboItem comboItem2;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

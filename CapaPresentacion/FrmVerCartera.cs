@@ -114,21 +114,23 @@ namespace CapaPresentacion
                 gestor = (Variables.tipo_usuario == "JEFE") ? CbxGestores.Text : Variables.cod_usuario;
                 dtpini = Convert.ToDateTime(DtpIni.Value);
                 dtpfin = Convert.ToDateTime(DtpFin.Value);
-                Task tarea = new Task(buscarCartera);
+                Task Buscar = new Task(buscarCartera);
                 PtbLoad.Visible = true;
-                tarea.Start();                
-                await tarea;
-                DgvCartera.DataSource = Cartera;
+                Buscar.Start();                
+                await Buscar;
+                DgvCartera.DataSource = Cartera;                
                 ocultarColumnas();
                 pintarFilas();
                 MessageBox.Show("LISTO", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 PtbLoad.Visible = false;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"SE PRODUJO EL SIGUIENTE ERROR: \n{ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-        }       
+        }  
+        
         private void buscarCartera()
         {
             if (Cartera != null )
@@ -256,6 +258,7 @@ namespace CapaPresentacion
                     Variables.monto = DgvCartera.CurrentRow.Cells["Monto"].Value.ToString().Trim();
 
                     BotonBPresionado?.Invoke(this, EventArgs.Empty);
+         
                 }
                 else
                 {
@@ -435,10 +438,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void eDITARFECHAAGESTIONARToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CbxEstado_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -461,6 +460,28 @@ namespace CapaPresentacion
             if (CbxGestores.SelectedIndex == 0)
             {
                 CbxGestores.SelectedIndex = -1;
+            }
+        }        
+
+        private void btnMostrarProgramacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string fecha_por_gestionar = Convert.ToString(DateTime.Now.Date);
+                fecha_por_gestionar = fecha_por_gestionar.Remove(10, 9);
+                gestor = (Variables.tipo_usuario == "JEFE") ? CbxGestores.Text : Variables.cod_usuario;
+                if (DgvCartera != null)
+                {
+                    DgvCartera.Columns.Clear();
+                }
+                DgvCartera.DataSource =  NVerCartera.MostrarProgramacion(gestor,fecha_por_gestionar);                
+                ocultarColumnas();
+                pintarFilas();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"SE PRODUJO UN ERROR: \n {ex}","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
         }
     }

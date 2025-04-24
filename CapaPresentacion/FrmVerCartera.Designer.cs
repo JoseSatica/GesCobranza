@@ -73,6 +73,7 @@
             this.TxtNombre = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TxtCodigo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnMostrarProgramacion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCartera)).BeginInit();
             this.CmsMenuOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbLoad)).BeginInit();
@@ -90,7 +91,7 @@
             this.BtnDetalleGestion.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnDetalleGestion.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDetalleGestion.ForeColor = System.Drawing.Color.Black;
-            this.BtnDetalleGestion.Location = new System.Drawing.Point(248, 33);
+            this.BtnDetalleGestion.Location = new System.Drawing.Point(206, 33);
             this.BtnDetalleGestion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnDetalleGestion.Name = "BtnDetalleGestion";
             this.BtnDetalleGestion.Size = new System.Drawing.Size(160, 44);
@@ -272,7 +273,7 @@
             this.BtnActuaGest.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnActuaGest.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActuaGest.ForeColor = System.Drawing.Color.Black;
-            this.BtnActuaGest.Location = new System.Drawing.Point(768, 33);
+            this.BtnActuaGest.Location = new System.Drawing.Point(804, 33);
             this.BtnActuaGest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnActuaGest.Name = "BtnActuaGest";
             this.BtnActuaGest.Size = new System.Drawing.Size(160, 44);
@@ -288,7 +289,7 @@
             this.BtnVerDeuda.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnVerDeuda.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVerDeuda.ForeColor = System.Drawing.Color.Black;
-            this.BtnVerDeuda.Location = new System.Drawing.Point(510, 33);
+            this.BtnVerDeuda.Location = new System.Drawing.Point(405, 33);
             this.BtnVerDeuda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnVerDeuda.Name = "BtnVerDeuda";
             this.BtnVerDeuda.Size = new System.Drawing.Size(160, 44);
@@ -348,7 +349,6 @@
             this.eDITARFECHAAGESTIONARToolStripMenuItem.Name = "eDITARFECHAAGESTIONARToolStripMenuItem";
             this.eDITARFECHAAGESTIONARToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.eDITARFECHAAGESTIONARToolStripMenuItem.Text = "EDITAR FECHA A GESTIONAR";
-            this.eDITARFECHAAGESTIONARToolStripMenuItem.Click += new System.EventHandler(this.eDITARFECHAAGESTIONARToolStripMenuItem_Click);
             // 
             // PtbLoad
             // 
@@ -357,8 +357,8 @@
             this.PtbLoad.Image = global::CapaPresentacion.Properties.Resources.icons8_spinner;
             this.PtbLoad.Location = new System.Drawing.Point(5, 117);
             this.PtbLoad.Name = "PtbLoad";
-            this.PtbLoad.Size = new System.Drawing.Size(1167, 344);
-            this.PtbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PtbLoad.Size = new System.Drawing.Size(1166, 345);
+            this.PtbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PtbLoad.TabIndex = 55;
             this.PtbLoad.TabStop = false;
             this.PtbLoad.Visible = false;
@@ -538,6 +538,7 @@
             this.CbxGestores.Size = new System.Drawing.Size(193, 26);
             this.CbxGestores.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CbxGestores.TabIndex = 73;
+            this.CbxGestores.Visible = false;
             this.CbxGestores.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxGestores.WatermarkText = "Todos";
             this.CbxGestores.SelectedValueChanged += new System.EventHandler(this.CbxGestores_SelectedValueChanged);
@@ -659,6 +660,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox3.Controls.Add(this.btnMostrarProgramacion);
             this.groupBox3.Controls.Add(this.PtbLoad);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label7);
@@ -679,6 +681,21 @@
             this.groupBox3.TabIndex = 70;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "GESTION DE CARTERA";
+            // 
+            // btnMostrarProgramacion
+            // 
+            this.btnMostrarProgramacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMostrarProgramacion.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnMostrarProgramacion.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarProgramacion.ForeColor = System.Drawing.Color.Black;
+            this.btnMostrarProgramacion.Location = new System.Drawing.Point(600, 33);
+            this.btnMostrarProgramacion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnMostrarProgramacion.Name = "btnMostrarProgramacion";
+            this.btnMostrarProgramacion.Size = new System.Drawing.Size(160, 44);
+            this.btnMostrarProgramacion.TabIndex = 69;
+            this.btnMostrarProgramacion.Text = "MOSTRAR PROGRAMACION";
+            this.btnMostrarProgramacion.UseVisualStyleBackColor = false;
+            this.btnMostrarProgramacion.Click += new System.EventHandler(this.btnMostrarProgramacion_Click);
             // 
             // FrmVerCartera
             // 
@@ -756,5 +773,6 @@
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx CbxGestores;
         private DevComponents.Editors.ComboItem comboItem3;
+        private System.Windows.Forms.Button btnMostrarProgramacion;
     }
 }

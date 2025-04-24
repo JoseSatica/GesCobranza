@@ -204,6 +204,11 @@ namespace CapaPresentacion
             }
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void ChkFraccTodos_CheckedChanged(object sender, EventArgs e)
         {
             if (ChkFraccTodos.Checked.Equals(true))
@@ -222,8 +227,6 @@ namespace CapaPresentacion
             }
         }
         #endregion
-
-
 
         //--------------------------- METODO CALCULAR DEUDA  ---------------------------------------------
         public void CalcularDeuda()

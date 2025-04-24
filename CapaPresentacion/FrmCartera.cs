@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Linq;
 
 
 namespace CapaPresentacion
@@ -11,6 +10,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
 
         private void FrmCartera_Load(object sender, EventArgs e)
         {
@@ -28,6 +28,9 @@ namespace CapaPresentacion
                 BtnMantenimiento.Enabled = true;
                 BtnIngresosxGestor.Enabled = true;
                 BtnReporte.Enabled = true;
+                BtnNotificaciones.Enabled = true;
+                BtnCargoNotificaciones.Enabled = true;
+                //btnProgramarGestion.Enabled = true;
             }
         }
         private void resolucionAviso()
@@ -43,43 +46,45 @@ namespace CapaPresentacion
         private void AbrirFormulariosHijos(Form FormHijo)
         {
             if (FormActivo != null)
-                FormActivo.Close();
-            FormActivo = FormHijo;
+
+                //FormActivo.Close();
+                FormActivo = FormHijo;
             FormHijo.TopLevel = false;
             FormHijo.FormBorderStyle = FormBorderStyle.None;
             FormHijo.Dock = DockStyle.Fill;
             PanelFormularios.Controls.Add(FormHijo);
             PanelFormularios.Tag = FormHijo;
-            FormHijo.BringToFront();            
+            FormHijo.BringToFront();
             FormHijo.Show();
-            
+
 
         }
+
+        FrmVerCartera verCartera = new FrmVerCartera();
         private void BtnCartera_Click_1(object sender, EventArgs e)
         {
-            FrmVerCartera frm = new FrmVerCartera();
-            AbrirFormulariosHijos(frm);
-            frm.TopLevel = false;
-            frm.Dock = DockStyle.Fill;
-            frm.BotonBPresionado += FormA_BotonBPresionado;
-            frm.LlamarDetalleDeuda += MostrarDetalleDeuda;
-            frm.LlamarDetalleCartera += MostrarDetalleCartera;
+            
+            AbrirFormulariosHijos(verCartera);
+            verCartera.TopLevel = false;
+            verCartera.Dock = DockStyle.Fill;
+
+            verCartera.BotonBPresionado += FormA_BotonBPresionado;
+            verCartera.LlamarDetalleDeuda += MostrarDetalleDeuda;
+            verCartera.LlamarDetalleCartera += MostrarDetalleCartera;
+
         }
         private void FormA_BotonBPresionado(object sender, EventArgs e)
         {
-            PanelFormularios.Controls.Remove((Control)sender);
             FrmCarteraGestionDetalle formB = new FrmCarteraGestionDetalle();
             formB.TopLevel = false;
             PanelFormularios.Controls.Add(formB);
             PanelFormularios.Tag = formB;
             formB.Dock = DockStyle.Fill;
             formB.BringToFront();
-            //formB.Dock = DockStyle.Fill;
             formB.Show();
         }
         private void MostrarDetalleDeuda(object sender, EventArgs e)
         {
-            PanelFormularios.Controls.Remove((Control)sender);
             FrmDeclaJura frmDetalleDeuda = new FrmDeclaJura();
             frmDetalleDeuda.TopLevel = false;
             frmDetalleDeuda.Dock = DockStyle.Fill;
@@ -91,7 +96,6 @@ namespace CapaPresentacion
 
         private void MostrarDetalleCartera(object sender, EventArgs e)
         {
-            PanelFormularios.Controls.Remove((Control)sender);
             FrmCarteraDetalle carteraDetalle = new FrmCarteraDetalle();
             carteraDetalle.TopLevel = false;
             PanelFormularios.Controls.Add(carteraDetalle);
@@ -104,7 +108,6 @@ namespace CapaPresentacion
         private void BtnBuscarContri_Click_1(object sender, EventArgs e)
         {
             AbrirFormulariosHijos(new FrmGesDeuda());
-            
         }
 
         private void BtnIngresosxGestor_Click_1(object sender, EventArgs e)
@@ -135,6 +138,18 @@ namespace CapaPresentacion
         private void BtnReporte_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijos(new FrmReporteCartera());
+        }
+
+        private void BtnNotificaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijos(new FrmNotificacion());
+
+        }
+
+        private void BtnCargoNotificaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijos(new frmCargoNotificaciones());
+
         }
     }
 }

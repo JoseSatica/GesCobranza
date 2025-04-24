@@ -45,5 +45,10 @@ namespace CapaNegocio
             DVerCartera Datos = new DVerCartera();
             return Datos.ActualizarFechaAGestionar(id_cartera, fecha_a_gestionar);
         }
+        public static DataTable MostrarProgramacion(string usuario, string fecha_por_gestionar)
+        {
+            DVerCartera Datos = new DVerCartera();
+            return Datos.MostrarProgramacion(usuario, fecha_por_gestionar);
+        }
     }
 }

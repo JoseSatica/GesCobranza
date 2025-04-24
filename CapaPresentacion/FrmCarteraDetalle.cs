@@ -74,24 +74,10 @@ namespace CapaPresentacion
         
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+       
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TxtFechaPagNoti_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

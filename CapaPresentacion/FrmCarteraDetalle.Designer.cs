@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCarteraDetalle)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,7 +79,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvCarteraDetalle.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvCarteraDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCarteraDetalle.Size = new System.Drawing.Size(1099, 161);
+            this.DgvCarteraDetalle.Size = new System.Drawing.Size(1018, 161);
             this.DgvCarteraDetalle.TabIndex = 0;
             this.DgvCarteraDetalle.SelectionChanged += new System.EventHandler(this.DgvCarteraDetalle_SelectionChanged);
             this.DgvCarteraDetalle.Sorted += new System.EventHandler(this.DgvCarteraDetalle_Sorted);
@@ -115,7 +116,7 @@
             this.LblConcepto.AutoSize = true;
             this.LblConcepto.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblConcepto.ForeColor = System.Drawing.Color.White;
-            this.LblConcepto.Location = new System.Drawing.Point(1005, 28);
+            this.LblConcepto.Location = new System.Drawing.Point(910, 21);
             this.LblConcepto.Name = "LblConcepto";
             this.LblConcepto.Size = new System.Drawing.Size(25, 17);
             this.LblConcepto.TabIndex = 3;
@@ -127,7 +128,7 @@
             this.LblMonto.AutoSize = true;
             this.LblMonto.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMonto.ForeColor = System.Drawing.Color.White;
-            this.LblMonto.Location = new System.Drawing.Point(1045, 28);
+            this.LblMonto.Location = new System.Drawing.Point(950, 21);
             this.LblMonto.Name = "LblMonto";
             this.LblMonto.Size = new System.Drawing.Size(49, 17);
             this.LblMonto.TabIndex = 4;
@@ -137,6 +138,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
+            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.LblConcepto);
             this.groupBox1.Controls.Add(this.LblCodigo);
             this.groupBox1.Controls.Add(this.LblNombre);
@@ -149,7 +151,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FLUJO DE GESTION";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -180,7 +181,6 @@
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "GESTION";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // TxtFechaPorGestionar
             // 
@@ -388,7 +388,20 @@
             this.label4.Size = new System.Drawing.Size(152, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "NOMBRE COMPLETO :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(1052, 49);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(104, 59);
+            this.btnSalir.TabIndex = 73;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmCarteraDetalle
             // 
@@ -439,5 +452,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX TxtEdadPersNoti;
         private DevComponents.DotNetBar.Controls.TextBoxX TxtDniPersNoti;
         private DevComponents.DotNetBar.Controls.TextBoxX TxtNomPersNoti;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

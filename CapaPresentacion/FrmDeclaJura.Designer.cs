@@ -84,6 +84,7 @@
             this.TotalPago = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Benf = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -557,6 +558,7 @@
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.btnSalir);
             this.panel11.Controls.Add(this.txtMonto);
             this.panel11.Controls.Add(this.lblmonto);
             this.panel11.Controls.Add(this.PtbLoad);
@@ -710,6 +712,20 @@
             this.Total.Text = "TOTAL";
             this.Total.Width = 70;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(1046, 290);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(119, 63);
+            this.btnSalir.TabIndex = 71;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FrmDeclaJura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,5 +838,6 @@
         private System.Windows.Forms.PictureBox PtbLoad;
         private System.Windows.Forms.Label lblmonto;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMonto;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

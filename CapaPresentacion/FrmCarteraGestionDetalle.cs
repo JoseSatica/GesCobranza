@@ -235,5 +235,10 @@ namespace CapaPresentacion
                 CbxSeguimiento.SelectedIndex = -1;
             }
         }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

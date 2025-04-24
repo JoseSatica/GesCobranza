@@ -35,14 +35,16 @@
             this.LblUsuarioNom = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.PanelOpciones = new System.Windows.Forms.Panel();
+            this.BtnNotificaciones = new System.Windows.Forms.Button();
             this.BtnReporte = new System.Windows.Forms.Button();
             this.BtnMantenimiento = new System.Windows.Forms.Button();
             this.BtnAsignarMasivo = new System.Windows.Forms.Button();
             this.BtnIngresosxGestor = new System.Windows.Forms.Button();
             this.BtnBuscarContri = new System.Windows.Forms.Button();
             this.BtnCartera = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnCargoNotificaciones = new System.Windows.Forms.Button();
             this.PanelCabecera.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PanelOpciones.SuspendLayout();
@@ -56,9 +58,9 @@
             this.PanelCabecera.Controls.Add(this.panel2);
             this.PanelCabecera.Controls.Add(this.label6);
             this.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelCabecera.Location = new System.Drawing.Point(211, 0);
+            this.PanelCabecera.Location = new System.Drawing.Point(218, 0);
             this.PanelCabecera.Name = "PanelCabecera";
-            this.PanelCabecera.Size = new System.Drawing.Size(1373, 91);
+            this.PanelCabecera.Size = new System.Drawing.Size(1366, 66);
             this.PanelCabecera.TabIndex = 31;
             // 
             // panel2
@@ -66,9 +68,9 @@
             this.panel2.Controls.Add(this.LblArea);
             this.panel2.Controls.Add(this.LblUsuarioNom);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1099, 0);
+            this.panel2.Location = new System.Drawing.Point(1092, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 87);
+            this.panel2.Size = new System.Drawing.Size(270, 62);
             this.panel2.TabIndex = 3;
             // 
             // LblArea
@@ -77,7 +79,7 @@
             this.LblArea.AutoSize = true;
             this.LblArea.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblArea.ForeColor = System.Drawing.Color.White;
-            this.LblArea.Location = new System.Drawing.Point(3, 49);
+            this.LblArea.Location = new System.Drawing.Point(3, 37);
             this.LblArea.Name = "LblArea";
             this.LblArea.Size = new System.Drawing.Size(35, 15);
             this.LblArea.TabIndex = 3;
@@ -89,7 +91,7 @@
             this.LblUsuarioNom.AutoSize = true;
             this.LblUsuarioNom.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuarioNom.ForeColor = System.Drawing.Color.White;
-            this.LblUsuarioNom.Location = new System.Drawing.Point(3, 30);
+            this.LblUsuarioNom.Location = new System.Drawing.Point(3, 18);
             this.LblUsuarioNom.Name = "LblUsuarioNom";
             this.LblUsuarioNom.Size = new System.Drawing.Size(54, 15);
             this.LblUsuarioNom.TabIndex = 2;
@@ -97,12 +99,12 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoEllipsis = true;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(306, 30);
+            this.label6.Location = new System.Drawing.Point(372, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(517, 34);
             this.label6.TabIndex = 1;
@@ -112,6 +114,8 @@
             // 
             this.PanelOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
             this.PanelOpciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelOpciones.Controls.Add(this.BtnCargoNotificaciones);
+            this.PanelOpciones.Controls.Add(this.BtnNotificaciones);
             this.PanelOpciones.Controls.Add(this.BtnReporte);
             this.PanelOpciones.Controls.Add(this.BtnMantenimiento);
             this.PanelOpciones.Controls.Add(this.BtnAsignarMasivo);
@@ -122,8 +126,28 @@
             this.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelOpciones.Location = new System.Drawing.Point(0, 0);
             this.PanelOpciones.Name = "PanelOpciones";
-            this.PanelOpciones.Size = new System.Drawing.Size(211, 861);
+            this.PanelOpciones.Size = new System.Drawing.Size(218, 861);
             this.PanelOpciones.TabIndex = 0;
+            // 
+            // BtnNotificaciones
+            // 
+            this.BtnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(173)))), ((int)(((byte)(201)))));
+            this.BtnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnNotificaciones.Enabled = false;
+            this.BtnNotificaciones.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnNotificaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))));
+            this.BtnNotificaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))));
+            this.BtnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNotificaciones.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNotificaciones.ForeColor = System.Drawing.Color.White;
+            this.BtnNotificaciones.Location = new System.Drawing.Point(0, 568);
+            this.BtnNotificaciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnNotificaciones.Name = "BtnNotificaciones";
+            this.BtnNotificaciones.Size = new System.Drawing.Size(214, 84);
+            this.BtnNotificaciones.TabIndex = 37;
+            this.BtnNotificaciones.Text = "NOTIFICACIONES";
+            this.BtnNotificaciones.UseVisualStyleBackColor = false;
+            this.BtnNotificaciones.Click += new System.EventHandler(this.BtnNotificaciones_Click);
             // 
             // BtnReporte
             // 
@@ -136,10 +160,10 @@
             this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReporte.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReporte.ForeColor = System.Drawing.Color.White;
-            this.BtnReporte.Location = new System.Drawing.Point(0, 508);
+            this.BtnReporte.Location = new System.Drawing.Point(0, 484);
             this.BtnReporte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnReporte.Name = "BtnReporte";
-            this.BtnReporte.Size = new System.Drawing.Size(207, 84);
+            this.BtnReporte.Size = new System.Drawing.Size(214, 84);
             this.BtnReporte.TabIndex = 36;
             this.BtnReporte.Text = "REPORTE";
             this.BtnReporte.UseVisualStyleBackColor = false;
@@ -156,10 +180,10 @@
             this.BtnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMantenimiento.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.BtnMantenimiento.Location = new System.Drawing.Point(0, 424);
+            this.BtnMantenimiento.Location = new System.Drawing.Point(0, 400);
             this.BtnMantenimiento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnMantenimiento.Name = "BtnMantenimiento";
-            this.BtnMantenimiento.Size = new System.Drawing.Size(207, 84);
+            this.BtnMantenimiento.Size = new System.Drawing.Size(214, 84);
             this.BtnMantenimiento.TabIndex = 35;
             this.BtnMantenimiento.Text = "MANTENIMIENTO DE USUARIOS";
             this.BtnMantenimiento.UseVisualStyleBackColor = false;
@@ -176,10 +200,10 @@
             this.BtnAsignarMasivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAsignarMasivo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAsignarMasivo.ForeColor = System.Drawing.Color.White;
-            this.BtnAsignarMasivo.Location = new System.Drawing.Point(0, 340);
+            this.BtnAsignarMasivo.Location = new System.Drawing.Point(0, 316);
             this.BtnAsignarMasivo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnAsignarMasivo.Name = "BtnAsignarMasivo";
-            this.BtnAsignarMasivo.Size = new System.Drawing.Size(207, 84);
+            this.BtnAsignarMasivo.Size = new System.Drawing.Size(214, 84);
             this.BtnAsignarMasivo.TabIndex = 33;
             this.BtnAsignarMasivo.Text = "ASIGNAR O CAMBIAR  CARTERA";
             this.BtnAsignarMasivo.UseVisualStyleBackColor = false;
@@ -196,10 +220,10 @@
             this.BtnIngresosxGestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresosxGestor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresosxGestor.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresosxGestor.Location = new System.Drawing.Point(0, 256);
+            this.BtnIngresosxGestor.Location = new System.Drawing.Point(0, 232);
             this.BtnIngresosxGestor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnIngresosxGestor.Name = "BtnIngresosxGestor";
-            this.BtnIngresosxGestor.Size = new System.Drawing.Size(207, 84);
+            this.BtnIngresosxGestor.Size = new System.Drawing.Size(214, 84);
             this.BtnIngresosxGestor.TabIndex = 32;
             this.BtnIngresosxGestor.Text = "VER INGRESOS POR GESTOR";
             this.BtnIngresosxGestor.UseVisualStyleBackColor = false;
@@ -215,10 +239,10 @@
             this.BtnBuscarContri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarContri.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarContri.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarContri.Location = new System.Drawing.Point(0, 172);
+            this.BtnBuscarContri.Location = new System.Drawing.Point(0, 148);
             this.BtnBuscarContri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnBuscarContri.Name = "BtnBuscarContri";
-            this.BtnBuscarContri.Size = new System.Drawing.Size(207, 84);
+            this.BtnBuscarContri.Size = new System.Drawing.Size(214, 84);
             this.BtnBuscarContri.TabIndex = 31;
             this.BtnBuscarContri.Text = "BUSCAR CONTRIBUYENTE";
             this.BtnBuscarContri.UseVisualStyleBackColor = false;
@@ -235,14 +259,24 @@
             this.BtnCartera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCartera.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCartera.ForeColor = System.Drawing.Color.White;
-            this.BtnCartera.Location = new System.Drawing.Point(0, 88);
+            this.BtnCartera.Location = new System.Drawing.Point(0, 64);
             this.BtnCartera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnCartera.Name = "BtnCartera";
-            this.BtnCartera.Size = new System.Drawing.Size(207, 84);
+            this.BtnCartera.Size = new System.Drawing.Size(214, 84);
             this.BtnCartera.TabIndex = 30;
             this.BtnCartera.Text = "CARTERA";
             this.BtnCartera.UseVisualStyleBackColor = false;
             this.BtnCartera.Click += new System.EventHandler(this.BtnCartera_Click_1);
+            // 
+            // PanelFormularios
+            // 
+            this.PanelFormularios.AutoScroll = true;
+            this.PanelFormularios.BackColor = System.Drawing.Color.White;
+            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFormularios.Location = new System.Drawing.Point(218, 66);
+            this.PanelFormularios.Name = "PanelFormularios";
+            this.PanelFormularios.Size = new System.Drawing.Size(1366, 795);
+            this.PanelFormularios.TabIndex = 32;
             // 
             // pictureBox1
             // 
@@ -251,20 +285,30 @@
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo_sat11;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(214, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // PanelFormularios
+            // BtnCargoNotificaciones
             // 
-            this.PanelFormularios.AutoScroll = true;
-            this.PanelFormularios.BackColor = System.Drawing.Color.White;
-            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormularios.Location = new System.Drawing.Point(211, 91);
-            this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(1373, 770);
-            this.PanelFormularios.TabIndex = 32;
+            this.BtnCargoNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(173)))), ((int)(((byte)(201)))));
+            this.BtnCargoNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCargoNotificaciones.Enabled = false;
+            this.BtnCargoNotificaciones.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnCargoNotificaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))));
+            this.BtnCargoNotificaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))));
+            this.BtnCargoNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargoNotificaciones.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargoNotificaciones.ForeColor = System.Drawing.Color.White;
+            this.BtnCargoNotificaciones.Location = new System.Drawing.Point(0, 652);
+            this.BtnCargoNotificaciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnCargoNotificaciones.Name = "BtnCargoNotificaciones";
+            this.BtnCargoNotificaciones.Size = new System.Drawing.Size(214, 84);
+            this.BtnCargoNotificaciones.TabIndex = 38;
+            this.BtnCargoNotificaciones.Text = "CARGO NOTIFICACIONES";
+            this.BtnCargoNotificaciones.UseVisualStyleBackColor = false;
+            this.BtnCargoNotificaciones.Click += new System.EventHandler(this.BtnCargoNotificaciones_Click);
             // 
             // FrmCartera
             // 
@@ -313,5 +357,7 @@
         public System.Windows.Forms.Panel PanelFormularios;
         private System.Windows.Forms.Button BtnMantenimiento;
         private System.Windows.Forms.Button BtnReporte;
+        private System.Windows.Forms.Button BtnNotificaciones;
+        private System.Windows.Forms.Button BtnCargoNotificaciones;
     }
 }
