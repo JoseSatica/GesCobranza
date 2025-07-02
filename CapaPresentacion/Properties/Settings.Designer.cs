@@ -12,7 +12,7 @@ namespace CapaPresentacion.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,22 +26,11 @@ namespace CapaPresentacion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.208;Initial Catalog=BASE_SIGMUN;User ID=sa;Password=Siempre" +
-            ".Listo")]
-        public string cn {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.201;Initial Catalog=BASE_SIGMUN;Integrated Security=True;Pe" +
+            "rsist Security Info=True;User ID=dba;TrustServerCertificate=True")]
+        public string BASE_SIGMUN {
             get {
-                return ((string)(this["cn"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.206;Initial Catalog=BASE_SIGMUN;Persist Security Info=True;" +
-            "User ID=sa;Password=Satica2023$$")]
-        public string BASE_SIGMUNConnectionString {
-            get {
-                return ((string)(this["BASE_SIGMUNConnectionString"]));
+                return ((string)(this["BASE_SIGMUN"]));
             }
         }
     }

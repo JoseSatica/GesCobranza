@@ -67,6 +67,8 @@
             this.ChkFraccTodos = new System.Windows.Forms.CheckBox();
             this.ChklFracc = new System.Windows.Forms.CheckedListBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.txtActualizarMonto = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.txtMonto = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblmonto = new System.Windows.Forms.Label();
             this.PtbLoad = new System.Windows.Forms.PictureBox();
@@ -84,7 +86,6 @@
             this.TotalPago = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Benf = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.Direccion);
             this.panel1.Controls.Add(this.LblContriDirecc);
@@ -119,46 +121,50 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1373, 75);
+            this.panel1.Size = new System.Drawing.Size(1209, 75);
             this.panel1.TabIndex = 0;
             // 
             // Direccion
             // 
+            this.Direccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Direccion.AutoSize = true;
-            this.Direccion.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.ForeColor = System.Drawing.Color.White;
-            this.Direccion.Location = new System.Drawing.Point(708, 23);
+            this.Direccion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Direccion.ForeColor = System.Drawing.Color.Black;
+            this.Direccion.Location = new System.Drawing.Point(720, 25);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(73, 17);
+            this.Direccion.Size = new System.Drawing.Size(75, 20);
             this.Direccion.TabIndex = 7;
             this.Direccion.Text = "Direccion:";
             // 
             // LblContriDirecc
             // 
-            this.LblContriDirecc.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContriDirecc.ForeColor = System.Drawing.Color.White;
-            this.LblContriDirecc.Location = new System.Drawing.Point(787, 23);
+            this.LblContriDirecc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblContriDirecc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblContriDirecc.ForeColor = System.Drawing.Color.Black;
+            this.LblContriDirecc.Location = new System.Drawing.Point(799, 25);
             this.LblContriDirecc.Name = "LblContriDirecc";
-            this.LblContriDirecc.Size = new System.Drawing.Size(423, 37);
+            this.LblContriDirecc.Size = new System.Drawing.Size(397, 37);
             this.LblContriDirecc.TabIndex = 6;
             this.LblContriDirecc.Text = "label7";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(528, 23);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(540, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 17);
+            this.label6.Size = new System.Drawing.Size(90, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Documento:";
             // 
             // LblContriNom
             // 
-            this.LblContriNom.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContriNom.ForeColor = System.Drawing.Color.White;
-            this.LblContriNom.Location = new System.Drawing.Point(249, 23);
+            this.LblContriNom.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblContriNom.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblContriNom.ForeColor = System.Drawing.Color.Black;
+            this.LblContriNom.Location = new System.Drawing.Point(261, 25);
             this.LblContriNom.Name = "LblContriNom";
             this.LblContriNom.Size = new System.Drawing.Size(258, 37);
             this.LblContriNom.TabIndex = 4;
@@ -166,45 +172,49 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(144, 23);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(156, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Contribuyente:";
             // 
             // LblContriDoc
             // 
+            this.LblContriDoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblContriDoc.AutoSize = true;
-            this.LblContriDoc.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContriDoc.ForeColor = System.Drawing.Color.White;
-            this.LblContriDoc.Location = new System.Drawing.Point(610, 23);
+            this.LblContriDoc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblContriDoc.ForeColor = System.Drawing.Color.Black;
+            this.LblContriDoc.Location = new System.Drawing.Point(622, 25);
             this.LblContriDoc.Name = "LblContriDoc";
-            this.LblContriDoc.Size = new System.Drawing.Size(46, 17);
+            this.LblContriDoc.Size = new System.Drawing.Size(50, 20);
             this.LblContriDoc.TabIndex = 2;
             this.LblContriDoc.Text = "label3";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 23);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(15, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo:";
             // 
             // Lblcodigo
             // 
+            this.Lblcodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Lblcodigo.AutoSize = true;
-            this.Lblcodigo.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblcodigo.ForeColor = System.Drawing.Color.White;
-            this.Lblcodigo.Location = new System.Drawing.Point(58, 23);
+            this.Lblcodigo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lblcodigo.ForeColor = System.Drawing.Color.Black;
+            this.Lblcodigo.Location = new System.Drawing.Point(70, 25);
             this.Lblcodigo.Name = "Lblcodigo";
-            this.Lblcodigo.Size = new System.Drawing.Size(70, 17);
+            this.Lblcodigo.Size = new System.Drawing.Size(76, 20);
             this.Lblcodigo.TabIndex = 0;
             this.Lblcodigo.Text = "Lblcodigo";
             // 
@@ -213,8 +223,8 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.panel10);
             this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(101, 81);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(19, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(133, 171);
             this.groupBox1.TabIndex = 2;
@@ -235,7 +245,7 @@
             // 
             this.ChklConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklConceptos.CheckOnClick = true;
-            this.ChklConceptos.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklConceptos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklConceptos.FormattingEnabled = true;
             this.ChklConceptos.Items.AddRange(new object[] {
             "Predial",
@@ -274,8 +284,8 @@
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.ChklPeriodo);
-            this.groupBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(243, 81);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(161, 81);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(86, 171);
             this.groupBox2.TabIndex = 3;
@@ -309,7 +319,7 @@
             // 
             this.ChklPeriodo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklPeriodo.CheckOnClick = true;
-            this.ChklPeriodo.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklPeriodo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklPeriodo.FormattingEnabled = true;
             this.ChklPeriodo.Location = new System.Drawing.Point(6, 56);
             this.ChklPeriodo.Name = "ChklPeriodo";
@@ -321,8 +331,8 @@
             this.GrbArbitrios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GrbArbitrios.Controls.Add(this.ChklArbitrios);
             this.GrbArbitrios.Controls.Add(this.panel5);
-            this.GrbArbitrios.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbArbitrios.Location = new System.Drawing.Point(338, 81);
+            this.GrbArbitrios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrbArbitrios.Location = new System.Drawing.Point(256, 81);
             this.GrbArbitrios.Name = "GrbArbitrios";
             this.GrbArbitrios.Size = new System.Drawing.Size(115, 171);
             this.GrbArbitrios.TabIndex = 4;
@@ -333,7 +343,7 @@
             // 
             this.ChklArbitrios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklArbitrios.CheckOnClick = true;
-            this.ChklArbitrios.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklArbitrios.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklArbitrios.FormattingEnabled = true;
             this.ChklArbitrios.Items.AddRange(new object[] {
             "Limp. Publica",
@@ -371,8 +381,8 @@
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.panel7);
             this.groupBox4.Controls.Add(this.ChklAño);
-            this.groupBox4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(460, 81);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(378, 81);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(86, 171);
             this.groupBox4.TabIndex = 5;
@@ -406,7 +416,7 @@
             // 
             this.ChklAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklAño.CheckOnClick = true;
-            this.ChklAño.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklAño.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklAño.FormattingEnabled = true;
             this.ChklAño.Location = new System.Drawing.Point(6, 56);
             this.ChklAño.Name = "ChklAño";
@@ -418,8 +428,8 @@
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox5.Controls.Add(this.ChklPredio);
             this.groupBox5.Controls.Add(this.panel6);
-            this.groupBox5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(552, 81);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(470, 81);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(437, 171);
             this.groupBox5.TabIndex = 6;
@@ -430,7 +440,7 @@
             // 
             this.ChklPredio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklPredio.CheckOnClick = true;
-            this.ChklPredio.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklPredio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklPredio.HorizontalScrollbar = true;
             this.ChklPredio.Location = new System.Drawing.Point(6, 65);
             this.ChklPredio.Name = "ChklPredio";
@@ -465,8 +475,8 @@
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox6.Controls.Add(this.panel8);
             this.groupBox6.Controls.Add(this.ChklVehiculo);
-            this.groupBox6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(995, 81);
+            this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(913, 81);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(131, 171);
             this.groupBox6.TabIndex = 7;
@@ -500,7 +510,7 @@
             // 
             this.ChklVehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklVehiculo.CheckOnClick = true;
-            this.ChklVehiculo.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklVehiculo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklVehiculo.FormattingEnabled = true;
             this.ChklVehiculo.Location = new System.Drawing.Point(6, 61);
             this.ChklVehiculo.Name = "ChklVehiculo";
@@ -512,8 +522,8 @@
             this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox7.Controls.Add(this.panel9);
             this.groupBox7.Controls.Add(this.ChklFracc);
-            this.groupBox7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(1132, 81);
+            this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(1050, 81);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(139, 171);
             this.groupBox7.TabIndex = 8;
@@ -547,7 +557,7 @@
             // 
             this.ChklFracc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChklFracc.CheckOnClick = true;
-            this.ChklFracc.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChklFracc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChklFracc.FormattingEnabled = true;
             this.ChklFracc.Location = new System.Drawing.Point(6, 61);
             this.ChklFracc.Name = "ChklFracc";
@@ -558,16 +568,47 @@
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.txtActualizarMonto);
             this.panel11.Controls.Add(this.btnSalir);
             this.panel11.Controls.Add(this.txtMonto);
             this.panel11.Controls.Add(this.lblmonto);
             this.panel11.Controls.Add(this.PtbLoad);
             this.panel11.Controls.Add(this.BtnBuscar);
             this.panel11.Controls.Add(this.ListvCalcularDeuda);
-            this.panel11.Location = new System.Drawing.Point(101, 258);
+            this.panel11.Location = new System.Drawing.Point(19, 258);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1175, 393);
             this.panel11.TabIndex = 18;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // txtActualizarMonto
+            // 
+            this.txtActualizarMonto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtActualizarMonto.BackColor = System.Drawing.Color.DodgerBlue;
+            this.txtActualizarMonto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActualizarMonto.ForeColor = System.Drawing.Color.White;
+            this.txtActualizarMonto.Location = new System.Drawing.Point(1045, 171);
+            this.txtActualizarMonto.Name = "txtActualizarMonto";
+            this.txtActualizarMonto.Size = new System.Drawing.Size(119, 64);
+            this.txtActualizarMonto.TabIndex = 72;
+            this.txtActualizarMonto.Text = "ACTUALIZAR MONTO EN CARTERA";
+            this.txtActualizarMonto.UseVisualStyleBackColor = false;
+            this.txtActualizarMonto.Visible = false;
+            this.txtActualizarMonto.Click += new System.EventHandler(this.txtActualizarMonto_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(1045, 306);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(119, 63);
+            this.btnSalir.TabIndex = 71;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtMonto
             // 
@@ -578,7 +619,7 @@
             this.txtMonto.Border.Class = "TextBoxBorder";
             this.txtMonto.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMonto.FocusHighlightEnabled = true;
-            this.txtMonto.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonto.Location = new System.Drawing.Point(1045, 123);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.PreventEnterBeep = true;
@@ -590,8 +631,8 @@
             // lblmonto
             // 
             this.lblmonto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblmonto.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmonto.ForeColor = System.Drawing.Color.White;
+            this.lblmonto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmonto.ForeColor = System.Drawing.Color.Black;
             this.lblmonto.Location = new System.Drawing.Point(1043, 96);
             this.lblmonto.Name = "lblmonto";
             this.lblmonto.Size = new System.Drawing.Size(112, 24);
@@ -603,9 +644,9 @@
             this.PtbLoad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PtbLoad.BackColor = System.Drawing.Color.Transparent;
             this.PtbLoad.Image = global::CapaPresentacion.Properties.Resources.icons8_spinner;
-            this.PtbLoad.Location = new System.Drawing.Point(6, 11);
+            this.PtbLoad.Location = new System.Drawing.Point(7, 40);
             this.PtbLoad.Name = "PtbLoad";
-            this.PtbLoad.Size = new System.Drawing.Size(1031, 358);
+            this.PtbLoad.Size = new System.Drawing.Size(1027, 329);
             this.PtbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PtbLoad.TabIndex = 23;
             this.PtbLoad.TabStop = false;
@@ -615,7 +656,7 @@
             // 
             this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnBuscar.BackColor = System.Drawing.Color.White;
-            this.BtnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
             this.BtnBuscar.Location = new System.Drawing.Point(1045, 11);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -631,6 +672,7 @@
             this.ListvCalcularDeuda.AllowColumnReorder = true;
             this.ListvCalcularDeuda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ListvCalcularDeuda.BackColor = System.Drawing.Color.AliceBlue;
+            this.ListvCalcularDeuda.CheckBoxes = true;
             this.ListvCalcularDeuda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Tributo,
             this.Año,
@@ -644,7 +686,7 @@
             this.TotalPago,
             this.Benf,
             this.Total});
-            this.ListvCalcularDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListvCalcularDeuda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListvCalcularDeuda.FullRowSelect = true;
             this.ListvCalcularDeuda.GridLines = true;
             this.ListvCalcularDeuda.HideSelection = false;
@@ -712,27 +754,12 @@
             this.Total.Text = "TOTAL";
             this.Total.Width = 70;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(1046, 290);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(119, 63);
-            this.btnSalir.TabIndex = 71;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // FrmDeclaJura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1373, 654);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
+            this.ClientSize = new System.Drawing.Size(1209, 663);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -743,13 +770,14 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FrmDeclaJura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDeclaJura_Load);
             this.Shown += new System.EventHandler(this.FrmDeclaJura_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDeclaJura_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -839,5 +867,6 @@
         private System.Windows.Forms.Label lblmonto;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMonto;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button txtActualizarMonto;
     }
 }

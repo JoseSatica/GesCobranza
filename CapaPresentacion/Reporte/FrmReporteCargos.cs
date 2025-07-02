@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.Reporte
 {
-    public partial class FrmNotificacion : Form
+    public partial class FrmReporteCargos : Form
     {
-        public FrmNotificacion()
+        public FrmReporteCargos()
         {
             InitializeComponent();
         }

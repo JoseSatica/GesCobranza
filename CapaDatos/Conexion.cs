@@ -15,11 +15,10 @@ namespace CapaDatos
         private Conexion()
         {
             this.Base = "BASE_SIGMUN";
-            this.Servidor = "192.168.3.206";   //"LAPTOP-JV0UUFQO\\SQLEXPRESS";
-            this.Usuario = "sa";
-            this.Clave = "Satica2023$$";
+            this.Servidor = "192.168.3.202";   //"LAPTOP-JV0UUFQO\\SQLEXPRESS"; 201; 205
+            this.Usuario = "usr_sa";//"usr_sa"; "sa"
+            this.Clave = "L3g10n261$";//"Satica2023$$";//"L3g10n261$";
             this.Seguridad = false;
-
         }
 
         public SqlConnection CrearConexion()

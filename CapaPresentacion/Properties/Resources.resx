@@ -133,17 +133,26 @@
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete_legal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_legal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar usuario para boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar usuario para boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_sat11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_sat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empleados_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empleados_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar usuario para boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar usuario para boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_sat1(marca_de_agua)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_sat1(marca_de_agua).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Load1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Load1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quitar usuario para boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quitar usuario para boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar usuario boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar usuario boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +166,12 @@
   <data name="login2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ver_bandeja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ver_bandeja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editarcosta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editarcosta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loading1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +184,7 @@
   <data name="cargando" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quitar usuario para boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quitar usuario para boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_legal (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_legal (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

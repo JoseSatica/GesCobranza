@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Media.Core;
 
 
 namespace CapaPresentacion
 {
     public partial class FrmDeclaJura : Form
     {
+        public string tipos {  get; set; }
         public string codigo;
         public string nombre;
         public string documento;
@@ -43,7 +45,7 @@ namespace CapaPresentacion
             LblContriDirecc.Text = direccion;
             codigo = Variables.codigo;            
 
-            //----------------------- CARGAR LOS CHECLISTBOX --------------------------------------
+            //---- CARGAR LOS CHECLISTBOX 
             #region
             try
             {
@@ -112,7 +114,7 @@ namespace CapaPresentacion
 
 
 
-        //--------------------------- VALIDACION DE LOS CHECKBOX "TODOS" --------------------------
+        //---- VALIDACION DE LOS CHECKBOX "TODOS" 
         #region
         private void ChkPredioTodos_CheckedChanged(object sender, EventArgs e)
         {
@@ -209,6 +211,33 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void FrmDeclaJura_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+                this.Close();
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private async void txtActualizarMonto_Click(object sender, EventArgs e)
+        {
+            ListvCalcularDeuda.Items.Clear();
+            txtMonto.Text = "";
+            tipos = "*02.30*,*02.01*,*00.16*,*30.02*,*30.03*,*30.04*,*30.82*,*25.04*,*11.00*,*02.30*,*00.38*,*00.30*,*25.10*,**";
+            Task Tarea = new Task(CalcularDeuda);
+            Tarea.Start();
+            PtbLoad.Visible = true;
+            await Tarea;
+            //foreach (DataGridViewRow fila in TblCalcular.Rows)
+            //{
+
+            //}
+            PtbLoad.Visible = false;
+        }
+
         private void ChkFraccTodos_CheckedChanged(object sender, EventArgs e)
         {
             if (ChkFraccTodos.Checked.Equals(true))
@@ -228,7 +257,7 @@ namespace CapaPresentacion
         }
         #endregion
 
-        //--------------------------- METODO CALCULAR DEUDA  ---------------------------------------------
+        //---- METODO CALCULAR DEUDA  
         public void CalcularDeuda()
         {
             string tipo = "";
@@ -319,9 +348,9 @@ namespace CapaPresentacion
                     periodo = periodo.Remove(periodo.Length - 1, 1);
                 }
 
-
+                tipo = ( !string.IsNullOrEmpty(tipos)) ? tipos : tipo;
                 TblCalcular = NGestion.CalcularDeuda(Lblcodigo.Text, annio, tipo, tiporec, periodo, predio, "0");
-
+                tipos = "";
             }
             catch (Exception e)
             {
@@ -334,7 +363,6 @@ namespace CapaPresentacion
         //------------------------ METODO CARGAR EL LISTVIEW ------------------------------------------------
         public void CargarListview(DataTable tabla)
         {
-
             int count = 0;
             List<DataRow> lista = tabla.AsEnumerable().ToList();
 
@@ -351,12 +379,9 @@ namespace CapaPresentacion
                 decimal totaldescuento = 0;
                 decimal totaltodo = 0;
                 
-
                 foreach (var objetoagrupado in grupo)
                 {
-
                     ListvCalcularDeuda.Items.Add(new ListViewItem(objetoagrupado.Field<string>("des_tipo"), GrupoList1));
-
                     ListvCalcularDeuda.Items[count].SubItems.Add(objetoagrupado.Field<string>("anno"));
                     ListvCalcularDeuda.Items[count].SubItems.Add(objetoagrupado.Field<string>("cod_pred"));
                     ListvCalcularDeuda.Items[count].SubItems.Add(objetoagrupado.Field<string>("anexo") + "-" + objetoagrupado.Field<string>("sub_anexo"));
@@ -383,7 +408,6 @@ namespace CapaPresentacion
                 ListvCalcularDeuda.Items[count].SubItems.Add("");
                 ListvCalcularDeuda.Items[count].SubItems.Add("");
                 ListvCalcularDeuda.Items[count].SubItems.Add("TOTAL");
-
                 ListvCalcularDeuda.Items[count].SubItems.Add(Convert.ToString(totalpago));
                 ListvCalcularDeuda.Items[count].SubItems.Add(Convert.ToString(totaldescuento));
                 ListvCalcularDeuda.Items[count].SubItems.Add(Convert.ToString(totaltodo)); //.SubItems.AddRange(subitem);
@@ -391,7 +415,7 @@ namespace CapaPresentacion
                 count++;
 
             }
-            count = 0;
+            count = 0;            
         }
 
         private async void FrmDeclaJura_Shown(object sender, EventArgs e)
@@ -406,13 +430,13 @@ namespace CapaPresentacion
         private async void BtnBuscar_Click(object sender, EventArgs e)
         {
             ListvCalcularDeuda.Items.Clear();
+            txtMonto.Text = "";
             Task Tarea = new Task(CalcularDeuda);
             Tarea.Start();
             PtbLoad.Visible = true;
             await Tarea;
             CargarListview(TblCalcular);
             PtbLoad.Visible = false;
-            //CalcularDeuda();
         }
     }
 }

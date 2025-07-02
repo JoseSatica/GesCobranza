@@ -56,19 +56,21 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
             this.groupBox1.Controls.Add(this.DgvMostrarIngresoDetalle);
             this.groupBox1.Controls.Add(this.PicBoxLoad);
             this.groupBox1.Controls.Add(this.DgvMostrarIngreso);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 108);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 113);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1345, 630);
+            this.groupBox1.Size = new System.Drawing.Size(1218, 524);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RECAUDADO POR GESTOR";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // DgvMostrarIngresoDetalle
             // 
@@ -81,7 +83,7 @@
             this.DgvMostrarIngresoDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.DgvMostrarIngresoDetalle.Location = new System.Drawing.Point(1098, 23);
+            this.DgvMostrarIngresoDetalle.Location = new System.Drawing.Point(1000, 25);
             this.DgvMostrarIngresoDetalle.Name = "DgvMostrarIngresoDetalle";
             this.DgvMostrarIngresoDetalle.ReadOnly = true;
             this.DgvMostrarIngresoDetalle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -100,7 +102,7 @@
             this.DgvMostrarIngresoDetalle.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.DgvMostrarIngresoDetalle.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvMostrarIngresoDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvMostrarIngresoDetalle.Size = new System.Drawing.Size(240, 197);
+            this.DgvMostrarIngresoDetalle.Size = new System.Drawing.Size(214, 197);
             this.DgvMostrarIngresoDetalle.TabIndex = 0;
             // 
             // Column1
@@ -122,9 +124,9 @@
             this.PicBoxLoad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PicBoxLoad.BackColor = System.Drawing.Color.Transparent;
             this.PicBoxLoad.Image = global::CapaPresentacion.Properties.Resources.icons8_spinner;
-            this.PicBoxLoad.Location = new System.Drawing.Point(17, 23);
+            this.PicBoxLoad.Location = new System.Drawing.Point(9, 25);
             this.PicBoxLoad.Name = "PicBoxLoad";
-            this.PicBoxLoad.Size = new System.Drawing.Size(1075, 599);
+            this.PicBoxLoad.Size = new System.Drawing.Size(985, 470);
             this.PicBoxLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PicBoxLoad.TabIndex = 8;
             this.PicBoxLoad.TabStop = false;
@@ -139,7 +141,7 @@
             this.DgvMostrarIngreso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvMostrarIngreso.BackgroundColor = System.Drawing.Color.White;
             this.DgvMostrarIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMostrarIngreso.Location = new System.Drawing.Point(17, 23);
+            this.DgvMostrarIngreso.Location = new System.Drawing.Point(9, 25);
             this.DgvMostrarIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.DgvMostrarIngreso.Name = "DgvMostrarIngreso";
             this.DgvMostrarIngreso.ReadOnly = true;
@@ -152,15 +154,16 @@
             this.DgvMostrarIngreso.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.DgvMostrarIngreso.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvMostrarIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvMostrarIngreso.Size = new System.Drawing.Size(1075, 599);
+            this.DgvMostrarIngreso.Size = new System.Drawing.Size(985, 470);
             this.DgvMostrarIngreso.TabIndex = 6;
             // 
             // BtnBuscar
             // 
+            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnBuscar.BackColor = System.Drawing.Color.White;
             this.BtnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BtnBuscar.Location = new System.Drawing.Point(924, 22);
+            this.BtnBuscar.Location = new System.Drawing.Point(905, 22);
             this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(116, 50);
@@ -176,7 +179,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(710, 42);
+            this.label3.Location = new System.Drawing.Point(646, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 17);
@@ -189,7 +192,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(517, 44);
+            this.label2.Location = new System.Drawing.Point(453, 44);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 17);
@@ -202,7 +205,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(217, 45);
+            this.label1.Location = new System.Drawing.Point(153, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
@@ -214,7 +217,7 @@
             this.DtpFechafin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DtpFechafin.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpFechafin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFechafin.Location = new System.Drawing.Point(773, 36);
+            this.DtpFechafin.Location = new System.Drawing.Point(709, 36);
             this.DtpFechafin.Margin = new System.Windows.Forms.Padding(4);
             this.DtpFechafin.Name = "DtpFechafin";
             this.DtpFechafin.Size = new System.Drawing.Size(112, 25);
@@ -225,7 +228,7 @@
             this.DtpFechaini.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DtpFechaini.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpFechaini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFechaini.Location = new System.Drawing.Point(582, 36);
+            this.DtpFechaini.Location = new System.Drawing.Point(518, 36);
             this.DtpFechaini.Margin = new System.Windows.Forms.Padding(4);
             this.DtpFechaini.Name = "DtpFechaini";
             this.DtpFechaini.Size = new System.Drawing.Size(120, 25);
@@ -241,6 +244,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.CbxGestor);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.BtnBuscar);
@@ -249,9 +253,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(14, 12);
+            this.groupBox2.Location = new System.Drawing.Point(3, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1347, 89);
+            this.groupBox2.Size = new System.Drawing.Size(1218, 97);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CRITERIO DE BUSQUEDA";
@@ -268,7 +272,7 @@
             this.CbxGestor.ItemHeight = 20;
             this.CbxGestor.Items.AddRange(new object[] {
             this.comboItem2});
-            this.CbxGestor.Location = new System.Drawing.Point(289, 36);
+            this.CbxGestor.Location = new System.Drawing.Point(225, 36);
             this.CbxGestor.Name = "CbxGestor";
             this.CbxGestor.Size = new System.Drawing.Size(213, 26);
             this.CbxGestor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -279,11 +283,10 @@
             // 
             // FrmIngresoxGestor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1373, 751);
+            this.ClientSize = new System.Drawing.Size(1224, 638);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,7 +295,6 @@
             this.Name = "FrmIngresoxGestor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "INGRESOS POR GESTOR";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmIngresoxGestor_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvMostrarIngresoDetalle)).EndInit();
@@ -301,6 +303,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

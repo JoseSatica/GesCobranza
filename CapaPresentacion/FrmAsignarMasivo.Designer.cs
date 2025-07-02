@@ -63,7 +63,7 @@
             // 
             this.BtnArchivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnArchivo.BackColor = System.Drawing.Color.White;
-            this.BtnArchivo.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnArchivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnArchivo.ForeColor = System.Drawing.Color.Black;
             this.BtnArchivo.Location = new System.Drawing.Point(29, 40);
             this.BtnArchivo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -80,12 +80,12 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(218, 44);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "GESTOR :";
             // 
@@ -94,7 +94,7 @@
             this.BtnCargarArchivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnCargarArchivo.BackColor = System.Drawing.Color.White;
             this.BtnCargarArchivo.Enabled = false;
-            this.BtnCargarArchivo.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargarArchivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCargarArchivo.ForeColor = System.Drawing.Color.Black;
             this.BtnCargarArchivo.Location = new System.Drawing.Point(33, 133);
             this.BtnCargarArchivo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -111,7 +111,7 @@
             this.BtnEnviarCartera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEnviarCartera.BackColor = System.Drawing.Color.White;
             this.BtnEnviarCartera.Enabled = false;
-            this.BtnEnviarCartera.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEnviarCartera.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnviarCartera.ForeColor = System.Drawing.Color.Black;
             this.BtnEnviarCartera.Location = new System.Drawing.Point(294, 73);
             this.BtnEnviarCartera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -158,7 +158,7 @@
             // 
             this.LblRuta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.LblRuta.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRuta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRuta.ForeColor = System.Drawing.Color.White;
             this.LblRuta.Location = new System.Drawing.Point(34, 88);
             this.LblRuta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -173,12 +173,12 @@
             this.Lblp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Lblp.AutoSize = true;
             this.Lblp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.Lblp.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lblp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lblp.ForeColor = System.Drawing.Color.White;
             this.Lblp.Location = new System.Drawing.Point(218, 463);
             this.Lblp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lblp.Name = "Lblp";
-            this.Lblp.Size = new System.Drawing.Size(27, 22);
+            this.Lblp.Size = new System.Drawing.Size(20, 17);
             this.Lblp.TabIndex = 9;
             this.Lblp.Text = "Ip";
             this.Lblp.Visible = false;
@@ -191,8 +191,8 @@
             this.groupBox3.Controls.Add(this.BtnCambiarCartera);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(679, 48);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(530, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(484, 532);
             this.groupBox3.TabIndex = 15;
@@ -206,7 +206,7 @@
             this.cbxGestorNuevoCambiar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxGestorNuevoCambiar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGestorNuevoCambiar.FocusHighlightEnabled = true;
-            this.cbxGestorNuevoCambiar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGestorNuevoCambiar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGestorNuevoCambiar.FormattingEnabled = true;
             this.cbxGestorNuevoCambiar.ItemHeight = 20;
             this.cbxGestorNuevoCambiar.Items.AddRange(new object[] {
@@ -227,7 +227,7 @@
             this.cbxGestorAntiguoCambiar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxGestorAntiguoCambiar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGestorAntiguoCambiar.FocusHighlightEnabled = true;
-            this.cbxGestorAntiguoCambiar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGestorAntiguoCambiar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGestorAntiguoCambiar.FormattingEnabled = true;
             this.cbxGestorAntiguoCambiar.ItemHeight = 20;
             this.cbxGestorAntiguoCambiar.Items.AddRange(new object[] {
@@ -245,7 +245,7 @@
             // 
             this.BtnCambiarCartera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnCambiarCartera.BackColor = System.Drawing.Color.White;
-            this.BtnCambiarCartera.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarCartera.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCambiarCartera.ForeColor = System.Drawing.Color.Black;
             this.BtnCambiarCartera.Location = new System.Drawing.Point(78, 115);
             this.BtnCambiarCartera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -261,12 +261,12 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(75, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 17);
+            this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "NUEVO GESTOR :";
             // 
@@ -275,12 +275,12 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(77, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "GESTOR :";
             // 
@@ -298,8 +298,8 @@
             this.groupBox2.Controls.Add(this.LblNumReTxt);
             this.groupBox2.Controls.Add(this.LblNumRegistro);
             this.groupBox2.Controls.Add(this.Lblp);
-            this.groupBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(170, 48);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(21, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(511, 532);
             this.groupBox2.TabIndex = 14;
@@ -313,7 +313,7 @@
             this.CbxGestores.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CbxGestores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxGestores.FocusHighlightEnabled = true;
-            this.CbxGestores.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxGestores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxGestores.FormattingEnabled = true;
             this.CbxGestores.ItemHeight = 20;
             this.CbxGestores.Items.AddRange(new object[] {
@@ -325,7 +325,9 @@
             this.CbxGestores.TabIndex = 74;
             this.CbxGestores.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxGestores.WatermarkText = "Todos";
+            this.CbxGestores.DropDown += new System.EventHandler(this.CbxGestores_DropDown);
             this.CbxGestores.SelectedValueChanged += new System.EventHandler(this.CbxGestores_SelectedValueChanged_1);
+            this.CbxGestores.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CbxGestores_MouseClick);
             // 
             // PtbLoad
             // 
@@ -345,12 +347,12 @@
             this.LblNumReTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNumReTxt.AutoSize = true;
             this.LblNumReTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.LblNumReTxt.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumReTxt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumReTxt.ForeColor = System.Drawing.Color.White;
             this.LblNumReTxt.Location = new System.Drawing.Point(34, 183);
             this.LblNumReTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumReTxt.Name = "LblNumReTxt";
-            this.LblNumReTxt.Size = new System.Drawing.Size(123, 17);
+            this.LblNumReTxt.Size = new System.Drawing.Size(117, 17);
             this.LblNumReTxt.TabIndex = 11;
             this.LblNumReTxt.Text = "N° DE REGISTRO :";
             this.LblNumReTxt.Visible = false;
@@ -360,12 +362,12 @@
             this.LblNumRegistro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNumRegistro.AutoSize = true;
             this.LblNumRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.LblNumRegistro.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumRegistro.ForeColor = System.Drawing.Color.White;
             this.LblNumRegistro.Location = new System.Drawing.Point(158, 183);
             this.LblNumRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumRegistro.Name = "LblNumRegistro";
-            this.LblNumRegistro.Size = new System.Drawing.Size(21, 17);
+            this.LblNumRegistro.Size = new System.Drawing.Size(20, 17);
             this.LblNumRegistro.TabIndex = 12;
             this.LblNumRegistro.Text = "Ip";
             this.LblNumRegistro.Visible = false;
@@ -379,10 +381,9 @@
             // 
             // FrmAsignarMasivo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1373, 773);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

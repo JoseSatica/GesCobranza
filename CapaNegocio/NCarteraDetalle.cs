@@ -10,10 +10,10 @@ namespace CapaNegocio
 {
     public class NCarteraDetalle
     {
-        public static DataTable InsertarDetalleGestion( int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad, string observacion, decimal monto, string fecha_por_gestionar, string uregistro, string pcregistro, string usuario)
+        public static DataTable InsertarDetalleGestion( int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad, string observacion, decimal monto, string fecha_por_gestionar, string uregistro, string pcregistro, string usuario, string fono, string correo)
         {
             DCarteraDetalle Datos = new DCarteraDetalle();
-            return Datos.InsertarDetalleGestion( idcartera,id_seguimiento,persona,dni,parentesco,edad,observacion,monto,fecha_por_gestionar,uregistro,pcregistro,usuario);
+            return Datos.InsertarDetalleGestion( idcartera,id_seguimiento,persona,dni,parentesco,edad,observacion,monto,fecha_por_gestionar,uregistro,pcregistro,usuario, fono, correo);
         }
         public static DataTable ActualizarCarteraSeguimiento(int id_cartera, int id_seguimiento, DateTime fecha_actualizada,decimal monto, string fecha_por_gestionar)
         {
@@ -35,6 +35,11 @@ namespace CapaNegocio
         {
             DCarteraDetalle Datos = new DCarteraDetalle();
             return Datos.ActualizarEstadoCartera(id_estado, id_cartera);
+        }
+        public static string ActualizarEstadoDetalleCartera(int id_detalle_cartera, string usuario, string uregistro, string pcregistro)
+        {
+            DCarteraDetalle Datos = new DCarteraDetalle();
+            return Datos.ActualizarEstadoDetalleCartera(id_detalle_cartera,usuario,uregistro,pcregistro);
         }
     }
 }

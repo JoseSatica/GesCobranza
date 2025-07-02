@@ -287,6 +287,8 @@ namespace CapaPresentacion.Reporte {
             
             private global::System.Data.DataColumn columnContribuyente;
             
+            private global::System.Data.DataColumn columnDireccion;
+            
             private global::System.Data.DataColumn columnMonto;
             
             private global::System.Data.DataColumn columnSeguimiento;
@@ -294,6 +296,8 @@ namespace CapaPresentacion.Reporte {
             private global::System.Data.DataColumn columnFecha;
             
             private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnfecha_a_gestionar;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -362,6 +366,14 @@ namespace CapaPresentacion.Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DireccionColumn {
+                get {
+                    return this.columnDireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn MontoColumn {
                 get {
                     return this.columnMonto;
@@ -389,6 +401,14 @@ namespace CapaPresentacion.Reporte {
             public global::System.Data.DataColumn EstadoColumn {
                 get {
                     return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fecha_a_gestionarColumn {
+                get {
+                    return this.columnfecha_a_gestionar;
                 }
             }
             
@@ -429,17 +449,19 @@ namespace CapaPresentacion.Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ReporteGestionCarteraRow AddReporteGestionCarteraRow(string Gestor, string Tipo, string Codigo, string Contribuyente, decimal Monto, string Seguimiento, System.DateTime Fecha, string Estado) {
+            public ReporteGestionCarteraRow AddReporteGestionCarteraRow(string Gestor, string Tipo, string Codigo, string Contribuyente, string Direccion, decimal Monto, string Seguimiento, System.DateTime Fecha, string Estado, string fecha_a_gestionar) {
                 ReporteGestionCarteraRow rowReporteGestionCarteraRow = ((ReporteGestionCarteraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Gestor,
                         Tipo,
                         Codigo,
                         Contribuyente,
+                        Direccion,
                         Monto,
                         Seguimiento,
                         Fecha,
-                        Estado};
+                        Estado,
+                        fecha_a_gestionar};
                 rowReporteGestionCarteraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReporteGestionCarteraRow);
                 return rowReporteGestionCarteraRow;
@@ -466,10 +488,12 @@ namespace CapaPresentacion.Reporte {
                 this.columnTipo = base.Columns["Tipo"];
                 this.columnCodigo = base.Columns["Codigo"];
                 this.columnContribuyente = base.Columns["Contribuyente"];
+                this.columnDireccion = base.Columns["Direccion"];
                 this.columnMonto = base.Columns["Monto"];
                 this.columnSeguimiento = base.Columns["Seguimiento"];
                 this.columnFecha = base.Columns["Fecha"];
                 this.columnEstado = base.Columns["Estado"];
+                this.columnfecha_a_gestionar = base.Columns["fecha_a_gestionar"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -483,6 +507,8 @@ namespace CapaPresentacion.Reporte {
                 base.Columns.Add(this.columnCodigo);
                 this.columnContribuyente = new global::System.Data.DataColumn("Contribuyente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnContribuyente);
+                this.columnDireccion = new global::System.Data.DataColumn("Direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDireccion);
                 this.columnMonto = new global::System.Data.DataColumn("Monto", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMonto);
                 this.columnSeguimiento = new global::System.Data.DataColumn("Seguimiento", typeof(string), null, global::System.Data.MappingType.Element);
@@ -491,17 +517,22 @@ namespace CapaPresentacion.Reporte {
                 base.Columns.Add(this.columnFecha);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEstado);
+                this.columnfecha_a_gestionar = new global::System.Data.DataColumn("fecha_a_gestionar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_a_gestionar);
                 this.columnGestor.AllowDBNull = false;
                 this.columnGestor.MaxLength = 20;
                 this.columnTipo.ReadOnly = true;
-                this.columnTipo.MaxLength = 7;
+                this.columnTipo.MaxLength = 50;
                 this.columnCodigo.MaxLength = 7;
                 this.columnContribuyente.ReadOnly = true;
                 this.columnContribuyente.MaxLength = 602;
+                this.columnDireccion.ReadOnly = true;
+                this.columnDireccion.MaxLength = 250;
                 this.columnSeguimiento.ReadOnly = true;
                 this.columnSeguimiento.MaxLength = 30;
                 this.columnEstado.ReadOnly = true;
                 this.columnEstado.MaxLength = 30;
+                this.columnfecha_a_gestionar.MaxLength = 13;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -704,6 +735,23 @@ namespace CapaPresentacion.Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Direccion {
+                get {
+                    try {
+                        return ((string)(this[this.tableReporteGestionCartera.DireccionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Direccion\' de la tabla \'ReporteGestionCartera\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableReporteGestionCartera.DireccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal Monto {
                 get {
                     try {
@@ -769,6 +817,23 @@ namespace CapaPresentacion.Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string fecha_a_gestionar {
+                get {
+                    try {
+                        return ((string)(this[this.tableReporteGestionCartera.fecha_a_gestionarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_a_gestionar\' de la tabla \'ReporteGestionCartera\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporteGestionCartera.fecha_a_gestionarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTipoNull() {
                 return this.IsNull(this.tableReporteGestionCartera.TipoColumn);
             }
@@ -801,6 +866,18 @@ namespace CapaPresentacion.Reporte {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetContribuyenteNull() {
                 this[this.tableReporteGestionCartera.ContribuyenteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDireccionNull() {
+                return this.IsNull(this.tableReporteGestionCartera.DireccionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDireccionNull() {
+                this[this.tableReporteGestionCartera.DireccionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -849,6 +926,18 @@ namespace CapaPresentacion.Reporte {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetEstadoNull() {
                 this[this.tableReporteGestionCartera.EstadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isfecha_a_gestionarNull() {
+                return this.IsNull(this.tableReporteGestionCartera.fecha_a_gestionarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setfecha_a_gestionarNull() {
+                this[this.tableReporteGestionCartera.fecha_a_gestionarColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1015,10 +1104,12 @@ namespace CapaPresentacion.Reporte.DsReporteCarteraTableAdapters {
             tableMapping.ColumnMappings.Add("Tipo", "Tipo");
             tableMapping.ColumnMappings.Add("Codigo", "Codigo");
             tableMapping.ColumnMappings.Add("Contribuyente", "Contribuyente");
+            tableMapping.ColumnMappings.Add("Direccion", "Direccion");
             tableMapping.ColumnMappings.Add("Monto", "Monto");
             tableMapping.ColumnMappings.Add("Seguimiento", "Seguimiento");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("fecha_a_gestionar", "fecha_a_gestionar");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1026,7 +1117,7 @@ namespace CapaPresentacion.Reporte.DsReporteCarteraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.BASE_SIGMUNConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.BASE_SIGMUN;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

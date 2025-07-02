@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class DCarteraDetalle
     {
-        public DataTable InsertarDetalleGestion(int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad,string observacion,decimal monto,string fecha_por_gestionar, string uregistro, string pcregistro, string usuario)
+        public DataTable InsertarDetalleGestion(int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad,string observacion,decimal monto,string fecha_por_gestionar, string uregistro, string pcregistro, string usuario, string telefono, string correo)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -29,6 +29,8 @@ namespace CapaDatos
                 comando.Parameters.Add("@dni", SqlDbType.VarChar).Value = dni;
                 comando.Parameters.Add("@parentesco", SqlDbType.VarChar).Value = parentesco;
                 comando.Parameters.Add("@edad", SqlDbType.VarChar).Value = edad;
+                comando.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
+                comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = correo;
                 //comando.Parameters.Add("@fecha_pag", SqlDbType.VarChar).Value = fecha_pag;
                 comando.Parameters.Add("@observacion", SqlDbType.VarChar).Value = observacion;
                 comando.Parameters.Add("@monto", SqlDbType.Decimal).Value = monto;
@@ -102,7 +104,6 @@ namespace CapaDatos
                 comando.Parameters.Add("@id_cartera", SqlDbType.Int).Value = id_cartera;
                 comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario;
 
-
                 Sqlcon.Open();
                 Resultado = comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -164,6 +165,37 @@ namespace CapaDatos
                 comando.Parameters.Add("@id_estado", SqlDbType.VarChar).Value = id_estado;
                 comando.Parameters.Add("@id_cartera", SqlDbType.VarChar).Value = id_cartera;
 
+                Sqlcon.Open();
+                Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO SE PUDO ACTUALIZAR";
+
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (Sqlcon.State == ConnectionState.Open) Sqlcon.Close();
+            }
+            return Rpta;
+        }
+        public string ActualizarEstadoDetalleCartera(int id_detalle_cartera,string usuario, string uregistro, string pcregistro)
+        {
+            string Rpta = "";
+
+            SqlConnection Sqlcon = new SqlConnection();
+
+            try
+            {
+                Sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Gestion.GestionCartera", Sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandTimeout = 2600;
+                comando.Parameters.Add("@buscar", SqlDbType.Int).Value = 25;
+                comando.Parameters.Add("@id_detalle_cartera", SqlDbType.Int).Value = id_detalle_cartera;
+                comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario;
+                comando.Parameters.Add("@uregistro", SqlDbType.VarChar).Value = uregistro;
+                comando.Parameters.Add("@pcregistro", SqlDbType.VarChar).Value = pcregistro;
                 Sqlcon.Open();
                 Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO SE PUDO ACTUALIZAR";
 
