@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Configuration;
-using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Windows.Forms;
+using System.Deployment.Application;
+using Org.BouncyCastle.Asn1.Crmf;
 
 namespace CapaPresentacion
 {
@@ -14,12 +17,24 @@ namespace CapaPresentacion
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         public string cnnstr = ConfigurationManager.AppSettings["BDSISTEMA"];
+        public string version;
+
+        // ...
+
         private void FrmCartera_Load(object sender, EventArgs e){
+            if (ApplicationDeployment.IsNetworkDeployed){version += ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();}
+            else{version += "No publicada";}
+            
+            SuspendLayout();
+            //this.Text = $"SISTEMA DE GESTION DE CARTERA - {Variables.nom_usuario}" + "    Versión: " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            this.Text = $"SISTEMA DE GESTION DE CARTERA - {Variables.nom_usuario}" + "    Versión: " + version;
+            
             this.MinimumSize = this.MaximumSize = this.Size;
             LblUsuarioNom.Text = Variables.nom_usuario;
             LblArea.Text = Variables.area_usuario;
             resolucionAviso();
             verificarJefe();
+            ResumeLayout();
         }
         private void verificarJefe(){
             if (Variables.tipo_usuario == "JEFE"){
@@ -34,7 +49,7 @@ namespace CapaPresentacion
         private void resolucionAviso(){
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
             int screenHeight = Screen.PrimaryScreen.Bounds.Height;
-            if (screenWidth < 1366 && screenHeight < 768){
+            if (screenWidth< 1600 && screenHeight < 900){
                 MessageBox.Show($"LA RESOLUCION DE SU PANTALLA({screenWidth}x{screenHeight}), PUEDE OCASIONAR PROBLEMAS A LA HORA DE USAR EL APLICATIVO.\nPOR FAVOR USE UNA RESOLUCION DE PANTALLA MINIMA DE 1600x900", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -57,7 +72,7 @@ namespace CapaPresentacion
                 PanelFormularios.Tag = FormHijo;
                 FormHijo.Height = Variables.height_panel;
                 FormHijo.Width = Variables.withd_panel;
-                //FormHijo.Dock = DockStyle.Fill;
+                FormHijo.Dock = DockStyle.Fill;
                 FormHijo.BringToFront();
                 FormHijo.Show();
             }
@@ -192,7 +207,7 @@ namespace CapaPresentacion
             //frmCargoNotificaciones.OpcionFormulario = "Actualizar";                    
             FrmReporteCargos reporteCargos = new FrmReporteCargos();
             reporteCargos.TopLevel = false;
-            //reporteCargos.Dock = DockStyle.Fill;
+            reporteCargos.Dock = DockStyle.Fill;
             PanelFormularios.Controls.Add(reporteCargos);
             PanelFormularios.Tag = reporteCargos;
             reporteCargos.BringToFront();

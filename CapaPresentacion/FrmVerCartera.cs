@@ -13,42 +13,24 @@ namespace CapaPresentacion
             InitializeComponent();
         }
         public string tipos {  get; set; }
-        public DataTable TablaEnvio;
-        public DataTable Tablita;
-        private DataTable comboSeguimiento;
-        private DataTable comboEstado;
-        private DataTable comboGestor;
-        private DataTable Cartera;
+        public DataTable TablaEnvio;public DataTable Tablita;private DataTable comboSeguimiento;
+        private DataTable comboEstado;private DataTable comboGestor;private DataTable Cartera;
         private string usuario;
         DateTimePicker dtpfechacambio = new DateTimePicker();
         int rowIndex;
-        private string codigo;
-        private string estado;
-        private string seguimiento;
-        private string nombre;
-        private string paterno;
-        private string materno;
-        private string gestor;
-        DateTime dtpini;
-        DateTime dtpfin;
-        private int paginicio = 1;
-        private int pagtotal = 20;
-        private int rowini = 1;
-        private int rowfin = 20;
+        private string codigo;private string estado;private string seguimiento;private string nombre;
+        private string paterno;private string materno;private string gestor;
+        DateTime dtpini;DateTime dtpfin;
+        private int paginicio = 1;private int pagtotal = 20;private int rowini = 1;private int rowfin = 20;
         //private int opc = 0;
-        private string via;
-        private string urb;
-        private string nro;
-        private string dpto;
-        private string mza;
-        private string lte;
-        private string sublte;
-        private int BuscoPredio = 0;
-        private int BuscoNormal = 0;
+        private string via;private string urb;private string nro;private string dpto;private string mza;private string lte;private string sublte;
+        private int BuscoPredio = 0;private int BuscoNormal = 0;private int actualizomonto = 0;
+
         private void FrmVerCartera_Load(object sender, EventArgs e){
             //this.MinimumSize = this.MaximumSize = this.Size;
             //this.Height = Variables.height_panel;
             //this.Width = Variables.withd_panel;
+            PtbLoad.IsRunning = true;
             SuspendLayout();
             RbCodigo.Checked = true;
             cargarComboGestores();
@@ -135,12 +117,14 @@ namespace CapaPresentacion
                     dtpini = Convert.ToDateTime(DtpIni.Value);
                     dtpfin = Convert.ToDateTime(DtpFin.Value);
                     Paginador();
+                    // Acá se realiza el proceso de cargar datos en el datatable
                     Task Buscar = new Task(buscarCartera);
                     PtbLoad.Visible = true;
-
                     Buscar.Start();
                     await Buscar;
+                    //
                     DgvCartera.DataSource = Cartera;
+
                     if (DgvCartera.Rows.Count > 0){
                         ocultarColumnas();
                         pintarFilas();
@@ -169,7 +153,7 @@ namespace CapaPresentacion
                         ocultarColumnas();
                         pintarFilas();
                     }
-                    MessageBox.Show("LISTO", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("LISTO", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     PtbLoad.Visible = false;
                     BuscoNormal = 0;
                     BuscoPredio = 1;
@@ -200,12 +184,29 @@ namespace CapaPresentacion
             //DgvCartera.Columns[0].HeaderText = "Gestor"; 
             if (DgvCartera.Rows.Count > 0) {
                 DgvCartera.RowHeadersVisible = false;
-                DgvCartera.Columns["ROW"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight;
-                DgvCartera.Columns["ROW"].DisplayIndex = 0;
+                DgvCartera.Columns["Orden"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                DgvCartera.Columns["Orden"].DisplayIndex = 0;
+                DgvCartera.Columns["Orden"].Width = 40;
+                DgvCartera.Columns["Orden"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
                 DgvCartera.Columns["Contribuyente"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                DgvCartera.Columns["Contribuyente"].Width = 320;
+                DgvCartera.Columns["Contribuyente"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                DgvCartera.Columns["Contribuyente"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+                DgvCartera.Columns["Direccion"].Width= 370;
+                DgvCartera.Columns["Direccion"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                DgvCartera.Columns["Direccion"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+                DgvCartera.Columns["Monto"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                DgvCartera.Columns["Monto"].DefaultCellStyle.Format = "N2";
+
                 //DgvCartera.Columns["ROW"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+
             foreach (DataGridViewRow fila in DgvCartera.Rows){
+                fila.Cells["Orden"].Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                fila.Cells["Monto"].Style.Alignment = DataGridViewContentAlignment.MiddleRight;
                 if (fila.Cells["Fecha_A_Gestionar"].Value.ToString().Trim() != "" && fila.Cells["Seguimiento"].Value.ToString().Trim() != "NO EXISTE"){
                     DateTime fechaGestion = Convert.ToDateTime(fila.Cells["Fecha_A_Gestionar"].Value.ToString().Trim()).Date;
 
@@ -229,14 +230,12 @@ namespace CapaPresentacion
             }
         }
         private void CompararMonto(){
-            int actualizomonto = 0;
             try{
                 foreach (DataGridViewRow item in DgvCartera.SelectedRows){
                     int id = Convert.ToInt32(item.Cells["id_cartera"].Value.ToString());
                     string codigo = item.Cells["Codigo"].Value.ToString().Trim();
                     decimal montoCartera = Convert.ToDecimal(item.Cells["Monto"].Value.ToString().Trim());
                     string fecha_por_gestionar = item.Cells["Fecha_A_Gestionar"].Value.ToString().Trim();
-
                     TablaEnvio = NGestion.CalcularDeuda(codigo, "", "*02.30*,*02.01*,*00.16*,*30.02*,*30.03*,*30.04*,*30.82*,*25.04*,*11.00*,*02.30*,*00.38*,*00.30*,*25.10*,**", "", "", "", "0");
                     int contador = 0;
                     decimal monto = 0;
@@ -250,16 +249,13 @@ namespace CapaPresentacion
                             ////NVerCartera.ActualizarMontoRefrescar(id, monto);
                             NCarteraDetalle.ActualizarCarteraSeguimiento(id, 6, DateTime.Now, monto, fecha_por_gestionar);
                             NCarteraDetalle.ActualizarEstadoCartera(2, id);
-                            NCarteraDetalle.InsertarDetalleGestion(id, 6, "", "", "", "", "POR ACTUALIZACION DE MONTO", monto, fecha_por_gestionar, Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario);
+                            NCarteraDetalle.InsertarDetalleGestion(id, 6, "", "", "", "", "POR ACTUALIZACION DE MONTO", monto, fecha_por_gestionar, Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario,"","");
                         //MessageBox.Show("SE ACTUALIZO CORRECTAMENTE EL CODIGO: " + codigo + ", CON EL MONTO " + monto, "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //cargarDgvCartera();
                         //}
                         actualizomonto = 1;
                     }
                     TablaEnvio.Clear();
-                }
-                if (actualizomonto == 1) {
-                    MessageBox.Show("SE ACTUALIZO CORRECTAMENTE EL MONTO ", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex){
@@ -334,6 +330,7 @@ namespace CapaPresentacion
         private void BtnVerDeuda_Click_1(object sender, EventArgs e){
             try{
                 if (DgvCartera.SelectedRows.Count > 0){
+                    SuspendLayout();
                     Variables.codigo = DgvCartera.CurrentRow.Cells["Codigo"].Value.ToString();
                     Variables.nombre_contri = DgvCartera.CurrentRow.Cells["Contribuyente"].Value.ToString();
                     Variables.id_cartera = Convert.ToInt32(DgvCartera.CurrentRow.Cells["id_cartera"].Value.ToString());
@@ -342,6 +339,7 @@ namespace CapaPresentacion
                     Variables.dni = DgvCartera.CurrentRow.Cells["num_doc"].Value.ToString();
                     tipos = "*02.30*,*02.01*,*00.16*,*30.02*,*30.03*,*30.04*,*30.82*,*25.04*,*11.00*,*02.30*,*00.38*,*00.30*,*25.10*,**";
                     LlamarDetalleDeuda?.Invoke(this, EventArgs.Empty);
+                    ResumeLayout();
                 }
                 else{
                     MessageBox.Show("NO HAY UN REGISTRO SELECCIONADO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -365,11 +363,18 @@ namespace CapaPresentacion
             Application.Exit();
         }
         private async void BtnRefrescar_Click_1(object sender, EventArgs e){
-            Task Tarea = new Task(CompararMonto);
-            Tarea.Start();
-            PtbLoad.Visible = true;
-            await Tarea;
-            PtbLoad.Visible = false;
+            if (MessageBox.Show("¿Desea actualizar la información de las deudas?","",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes){
+                Task Tarea = new Task(CompararMonto);
+                Tarea.Start();
+                PtbLoad.Visible = true;
+                await Tarea;
+                if (actualizomonto == 1){
+                    MessageBox.Show("SE ACTUALIZO CORRECTAMENTE EL MONTO ", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                PtbLoad.Visible = false;
+            }
+
         }
         private void BtnRefrescar_MouseHover(object sender, EventArgs e){
             TipAyuda.AutoPopDelay = 5000;TipAyuda.InitialDelay = 500;

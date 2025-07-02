@@ -192,7 +192,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(679, 48);
+            this.groupBox3.Location = new System.Drawing.Point(530, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(484, 532);
             this.groupBox3.TabIndex = 15;
@@ -299,7 +299,7 @@
             this.groupBox2.Controls.Add(this.LblNumRegistro);
             this.groupBox2.Controls.Add(this.Lblp);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(170, 48);
+            this.groupBox2.Location = new System.Drawing.Point(21, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(511, 532);
             this.groupBox2.TabIndex = 14;

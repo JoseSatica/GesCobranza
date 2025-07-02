@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class DCarteraDetalle
     {
-        public DataTable InsertarDetalleGestion(int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad,string observacion,decimal monto,string fecha_por_gestionar, string uregistro, string pcregistro, string usuario)
+        public DataTable InsertarDetalleGestion(int idcartera, int id_seguimiento,  string persona, string dni, string parentesco, string edad,string observacion,decimal monto,string fecha_por_gestionar, string uregistro, string pcregistro, string usuario, string telefono, string correo)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -29,6 +29,8 @@ namespace CapaDatos
                 comando.Parameters.Add("@dni", SqlDbType.VarChar).Value = dni;
                 comando.Parameters.Add("@parentesco", SqlDbType.VarChar).Value = parentesco;
                 comando.Parameters.Add("@edad", SqlDbType.VarChar).Value = edad;
+                comando.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
+                comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = correo;
                 //comando.Parameters.Add("@fecha_pag", SqlDbType.VarChar).Value = fecha_pag;
                 comando.Parameters.Add("@observacion", SqlDbType.VarChar).Value = observacion;
                 comando.Parameters.Add("@monto", SqlDbType.Decimal).Value = monto;

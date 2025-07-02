@@ -61,9 +61,9 @@
             this.PanelCabecera.Controls.Add(this.panel2);
             this.PanelCabecera.Controls.Add(this.label6);
             this.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelCabecera.Location = new System.Drawing.Point(187, 0);
+            this.PanelCabecera.Location = new System.Drawing.Point(150, 0);
             this.PanelCabecera.Name = "PanelCabecera";
-            this.PanelCabecera.Size = new System.Drawing.Size(1163, 49);
+            this.PanelCabecera.Size = new System.Drawing.Size(1200, 49);
             this.PanelCabecera.TabIndex = 31;
             // 
             // panel2
@@ -71,7 +71,7 @@
             this.panel2.Controls.Add(this.LblArea);
             this.panel2.Controls.Add(this.LblUsuarioNom);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(935, 0);
+            this.panel2.Location = new System.Drawing.Point(972, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 45);
             this.panel2.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1159, 45);
+            this.label6.Size = new System.Drawing.Size(1196, 45);
             this.label6.TabIndex = 1;
             this.label6.Text = "SISTEMA DE GESTION DE COBRANZAS";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@
             this.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelOpciones.Location = new System.Drawing.Point(0, 0);
             this.PanelOpciones.Name = "PanelOpciones";
-            this.PanelOpciones.Size = new System.Drawing.Size(187, 729);
+            this.PanelOpciones.Size = new System.Drawing.Size(150, 729);
             this.PanelOpciones.TabIndex = 0;
             // 
             // BtnBandejaLegal
@@ -145,7 +145,7 @@
             this.BtnBandejaLegal.Location = new System.Drawing.Point(0, 516);
             this.BtnBandejaLegal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnBandejaLegal.Name = "BtnBandejaLegal";
-            this.BtnBandejaLegal.Size = new System.Drawing.Size(183, 67);
+            this.BtnBandejaLegal.Size = new System.Drawing.Size(146, 67);
             this.BtnBandejaLegal.TabIndex = 40;
             this.BtnBandejaLegal.Text = "BANDEJA CON LEGAL";
             this.BtnBandejaLegal.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.BtnListaNotificaciones.Location = new System.Drawing.Point(0, 449);
             this.BtnListaNotificaciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnListaNotificaciones.Name = "BtnListaNotificaciones";
-            this.BtnListaNotificaciones.Size = new System.Drawing.Size(183, 67);
+            this.BtnListaNotificaciones.Size = new System.Drawing.Size(146, 67);
             this.BtnListaNotificaciones.TabIndex = 39;
             this.BtnListaNotificaciones.Text = "LISTA DE NOTIFICACION";
             this.BtnListaNotificaciones.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.BtnReporte.Location = new System.Drawing.Point(0, 382);
             this.BtnReporte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnReporte.Name = "BtnReporte";
-            this.BtnReporte.Size = new System.Drawing.Size(183, 67);
+            this.BtnReporte.Size = new System.Drawing.Size(146, 67);
             this.BtnReporte.TabIndex = 36;
             this.BtnReporte.Text = "REPORTE";
             this.BtnReporte.UseVisualStyleBackColor = false;
@@ -205,7 +205,7 @@
             this.BtnMantenimiento.Location = new System.Drawing.Point(0, 315);
             this.BtnMantenimiento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnMantenimiento.Name = "BtnMantenimiento";
-            this.BtnMantenimiento.Size = new System.Drawing.Size(183, 67);
+            this.BtnMantenimiento.Size = new System.Drawing.Size(146, 67);
             this.BtnMantenimiento.TabIndex = 35;
             this.BtnMantenimiento.Text = "MANTENIMIENTO DE USUARIOS";
             this.BtnMantenimiento.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@
             this.BtnAsignarMasivo.Location = new System.Drawing.Point(0, 248);
             this.BtnAsignarMasivo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnAsignarMasivo.Name = "BtnAsignarMasivo";
-            this.BtnAsignarMasivo.Size = new System.Drawing.Size(183, 67);
+            this.BtnAsignarMasivo.Size = new System.Drawing.Size(146, 67);
             this.BtnAsignarMasivo.TabIndex = 33;
             this.BtnAsignarMasivo.Text = "ASIGNAR O CAMBIAR  CARTERA";
             this.BtnAsignarMasivo.UseVisualStyleBackColor = false;
@@ -245,7 +245,7 @@
             this.BtnIngresosxGestor.Location = new System.Drawing.Point(0, 181);
             this.BtnIngresosxGestor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnIngresosxGestor.Name = "BtnIngresosxGestor";
-            this.BtnIngresosxGestor.Size = new System.Drawing.Size(183, 67);
+            this.BtnIngresosxGestor.Size = new System.Drawing.Size(146, 67);
             this.BtnIngresosxGestor.TabIndex = 32;
             this.BtnIngresosxGestor.Text = "VER INGRESOS POR GESTOR";
             this.BtnIngresosxGestor.UseVisualStyleBackColor = false;
@@ -265,7 +265,7 @@
             this.BtnBuscarContri.Location = new System.Drawing.Point(0, 114);
             this.BtnBuscarContri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnBuscarContri.Name = "BtnBuscarContri";
-            this.BtnBuscarContri.Size = new System.Drawing.Size(183, 67);
+            this.BtnBuscarContri.Size = new System.Drawing.Size(146, 67);
             this.BtnBuscarContri.TabIndex = 31;
             this.BtnBuscarContri.Text = "BUSCAR CONTRIBUYENTE";
             this.BtnBuscarContri.UseVisualStyleBackColor = false;
@@ -285,7 +285,7 @@
             this.BtnCartera.Location = new System.Drawing.Point(0, 47);
             this.BtnCartera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnCartera.Name = "BtnCartera";
-            this.BtnCartera.Size = new System.Drawing.Size(183, 67);
+            this.BtnCartera.Size = new System.Drawing.Size(146, 67);
             this.BtnCartera.TabIndex = 30;
             this.BtnCartera.Text = "GESTIONAR CARTERA";
             this.BtnCartera.UseVisualStyleBackColor = false;
@@ -298,7 +298,7 @@
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo_sat11;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -309,16 +309,16 @@
             this.PanelFormularios.BackColor = System.Drawing.Color.White;
             this.PanelFormularios.Controls.Add(this.pictureBox2);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormularios.Location = new System.Drawing.Point(187, 49);
+            this.PanelFormularios.Location = new System.Drawing.Point(150, 49);
             this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(1163, 680);
+            this.PanelFormularios.Size = new System.Drawing.Size(1200, 680);
             this.PanelFormularios.TabIndex = 32;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.logo_sat1_marca_de_agua_;
-            this.pictureBox2.Location = new System.Drawing.Point(203, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(222, 84);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(792, 495);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

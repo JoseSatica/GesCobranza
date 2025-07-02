@@ -59,7 +59,7 @@ namespace CapaPresentacion{
                         PtbLoad.Visible = true;
                         await Tarea;
                         using (TransactionScope transacion = new TransactionScope()){
-                            NCarteraDetalle.InsertarDetalleGestion(Variables.id_cartera, actualizaIdSeguimiento, TxtNomPersNoti.Text, TxtDniPersNoti.Text.Trim(), TxtParentPersNoti.Text.Trim(), TxtEdadPersNoti.Text.Trim(), TxtObserNoti.Text, monto, fecha_por_gestionar, Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario);
+                            NCarteraDetalle.InsertarDetalleGestion(Variables.id_cartera, actualizaIdSeguimiento, TxtNomPersNoti.Text, TxtDniPersNoti.Text.Trim(), TxtParentPersNoti.Text.Trim(), TxtEdadPersNoti.Text.Trim(), TxtObserNoti.Text, monto, fecha_por_gestionar, Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario,txtTelefono.Text.Trim(),txtCorreo.Text.Trim());
                             NCarteraDetalle.ActualizarCarteraSeguimiento(Variables.id_cartera, actualizaIdSeguimiento, DateTime.Now, monto, fecha_por_gestionar);
                             cambiarEstado();
                             transacion.Complete();
@@ -162,6 +162,14 @@ namespace CapaPresentacion{
         }
         private void btnSalir_Click_1(object sender, EventArgs e){
             this.Close();
+        }
+
+        private void checkBoxX1_CheckedChanged(object sender, EventArgs e)
+        {
+            if ( checkBoxX1.Checked){
+                TxtNomPersNoti.Text = LblNomContri.Text;
+            }
+            else { TxtNomPersNoti.Text = ""; }
         }
     }
 }

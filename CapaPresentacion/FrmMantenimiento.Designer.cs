@@ -230,7 +230,7 @@
             this.groupBox1.Controls.Add(this.DgvGestores);
             this.groupBox1.Controls.Add(this.LblGestor);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(137, 25);
+            this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(759, 498);
             this.groupBox1.TabIndex = 67;

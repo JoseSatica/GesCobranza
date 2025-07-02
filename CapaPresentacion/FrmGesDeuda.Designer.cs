@@ -80,8 +80,6 @@ namespace CapaPresentacion
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.LblCodigo);
             this.groupBox1.Controls.Add(this.LblDoc);
             this.groupBox1.Controls.Add(this.TxtApellidoMaterno);
@@ -549,8 +547,6 @@ namespace CapaPresentacion
             this.DgvGestion.AllowUserToAddRows = false;
             this.DgvGestion.AllowUserToDeleteRows = false;
             this.DgvGestion.AllowUserToOrderColumns = true;
-            this.DgvGestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvGestion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DgvGestion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvGestion.GridColor = System.Drawing.Color.Silver;

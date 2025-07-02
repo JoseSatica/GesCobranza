@@ -59,7 +59,7 @@ namespace CapaPresentacion
                             NCarteraDetalle.ActualizarEstadoCartera(4, Variables.id_cartera);
                             DataTable idcarter = NAsignarMasivo.EnviarCartera(CbxGestorNuevo.SelectedValue.ToString(), Variables.codigo, 1, 1, monto);
 
-                            NCarteraDetalle.InsertarDetalleGestion(Convert.ToInt32(idcarter.Rows[0]["id"].ToString()), 1, "", "", "", "", "", monto, "", Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario);
+                            NCarteraDetalle.InsertarDetalleGestion(Convert.ToInt32(idcarter.Rows[0]["id"].ToString()), 1, "", "", "", "", "", monto, "", Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario,"","");
                             PtbLoad.Visible = false;
                             MessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             transaccion.Complete();
