@@ -36,5 +36,10 @@ namespace CapaNegocio
             DCarteraDetalle Datos = new DCarteraDetalle();
             return Datos.ActualizarEstadoCartera(id_estado, id_cartera);
         }
+        public static string ActualizarEstadoDetalleCartera(int id_detalle_cartera, string usuario, string uregistro, string pcregistro)
+        {
+            DCarteraDetalle Datos = new DCarteraDetalle();
+            return Datos.ActualizarEstadoDetalleCartera(id_detalle_cartera,usuario,uregistro,pcregistro);
+        }
     }
 }

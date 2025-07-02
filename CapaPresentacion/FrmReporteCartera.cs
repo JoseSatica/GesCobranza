@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using DevComponents.DotNetBar.Controls;
 using System;
 using System.Data;
 using System.Threading.Tasks;
@@ -24,13 +25,17 @@ namespace CapaPresentacion
         private DateTime fechafin;
         private DataTable comboSeguimiento;
         private DataTable comboEstado;
+        private DataTable tablita = new DataTable();
+
 
         private void FrmReporteCartera_Load(object sender, EventArgs e)
         {
-            verificarJefe();
+            this.MinimumSize = this.MaximumSize = this.Size;
+            
             cargarComboGestores();
             cargarComboEstado();
             cargarComboSeguimiento();
+            verificarJefe();
         }
         private void verificarJefe()
         {
@@ -48,11 +53,10 @@ namespace CapaPresentacion
         }
         private void cargarComboGestores()
         {
-            comboGestor = NVerCartera.CargarComboGestores();
-            foreach (DataRow fila in comboGestor.Rows)
-            {
-                CbxGestores.Items.Add(fila["cod_gestor"].ToString().Trim());
-            }
+            comboGestor = NVerCartera.CargarDGVGestores();
+            CbxGestores.DataSource = comboGestor;
+            CbxGestores.DisplayMember = "gestor";
+            CbxGestores.ValueMember = "gestor";
         }
         private void cargarComboSeguimiento()
         {
@@ -74,7 +78,7 @@ namespace CapaPresentacion
         {
             foreach (DataGridViewColumn item in DgvCartera.Columns)
             {
-                if (item.HeaderCell.Value.ToString() == "id_detalle_cartera" || item.HeaderCell.Value.ToString() == "id_cartera" || item.HeaderCell.Value.ToString() == "id_seguimiento" || item.HeaderCell.Value.ToString() == "num_doc")
+                if (item.HeaderCell.Value.ToString() == "ROW" || item.HeaderCell.Value.ToString() == "id_detalle_cartera" || item.HeaderCell.Value.ToString() == "id_cartera" || item.HeaderCell.Value.ToString() == "id_seguimiento" || item.HeaderCell.Value.ToString() == "num_doc")
                 {
                     item.Visible = false;
                 }
@@ -85,7 +89,7 @@ namespace CapaPresentacion
         {
             try
             {
-                Reporte.FrmReporte frm = new Reporte.FrmReporte();
+                Reporte.FrmReporteCartera frm = new Reporte.FrmReporteCartera();
                 frm.ShowDialog();
                 limpiar();
             }
@@ -98,24 +102,41 @@ namespace CapaPresentacion
         private async void BtnBuscar_Click(object sender, EventArgs e)
         {
             
-            
-            
-            
-            if (DgvCartera.RowCount > 0)
-            {
-                DgvCartera.Columns.Clear();
-            }
+            //if (DgvCartera.RowCount > 0)
+            //{
+            //    DgvCartera.Columns.Clear();
+            //}
             try
             {
-                variables();               
-                Task<DataTable> Tarea = new Task<DataTable>(BuscarCartera);
-                Tarea.Start();
+                DgvCartera.VirtualMode = true;
+                variables();
+                // Ejecuta la consulta en un hilo separado para evitar congelar la UI
                 ptbLoad3.Visible = true;
-                DgvCartera.DataSource = await Tarea;
-                ocultarColumnas();
-                MessageBox.Show("LISTO","SISTEMA",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                tablita = await Task.Run(() =>
+                    NReporte.ReporteGestionCartera(codigo, estado, seguimiento, nombre, appaterno, apmaterno, usuario, fechaini, fechafin)
+                );
+                DgvCartera.Enabled = false;
+                DgvCartera.SuspendLayout();
+                DgvCartera.Invoke(new Action(() =>
+                {
+                    DgvCartera.DataSource = tablita;
+                }));
+                //DgvCartera.DataSource = tablita;
+                DgvCartera.ResumeLayout();
+                DgvCartera.Enabled = true;
                 BtnReporte.Enabled = true;
-                ptbLoad3.Visible=false;
+                ptbLoad3.Visible = false;
+                MessageBox.Show("LISTO", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Task<DataTable> Tarea = new Task<DataTable>(BuscarCartera);
+                //Tarea.Start();
+                //ptbLoad3.Visible = true;
+                //DgvCartera.SuspendLayout();
+                //DgvCartera.DataSource =  await Tarea;
+                //ocultarColumnas();
+                //DgvCartera.ResumeLayout();
+                //MessageBox.Show("LISTO","SISTEMA",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //BtnReporte.Enabled = true;
+                //ptbLoad3.Visible = false;
 
                 Variables.gestor = usuario;
                 Variables.codigo = codigo;
@@ -134,14 +155,9 @@ namespace CapaPresentacion
         }
         private DataTable BuscarCartera()
         {
-            DataTable tabla = NVerCartera.BuscarCartera(codigo, estado, seguimiento, nombre, appaterno, apmaterno, usuario, fechaini, fechafin);
-            //if (DgvCartera.InvokeRequired)
-            //{
-            //    DgvCartera.Invoke(new MethodInvoker(() =>
-            //    {
-            //    }));
-            //}                          
+            DataTable tabla = NReporte.ReporteGestionCartera(codigo, estado, seguimiento, nombre, appaterno, apmaterno, usuario, fechaini, fechafin);
             return tabla;
+             
         }
 
         private void limpiar()
@@ -163,7 +179,7 @@ namespace CapaPresentacion
             apmaterno = TxtApMaterno.Text.Trim();
             estado = CbxEstado.Text;
             seguimiento = CbxSeguimiento.Text;
-            usuario = CbxGestores.Text;
+            usuario = (Variables.tipo_usuario == "JEFE") ? CbxGestores.SelectedValue.ToString() : Variables.cod_usuario;
             fechaini = Convert.ToDateTime(DtpIni.Value);
             fechafin = Convert.ToDateTime(DtpFin.Value);
         }
@@ -191,10 +207,10 @@ namespace CapaPresentacion
 
         private void CbxGestores_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (CbxGestores.SelectedIndex == 0)
-            {
-                CbxGestores.SelectedIndex = -1;
-            }
+            //if (CbxGestores.SelectedIndex == 0)
+            //{
+            //    CbxGestores.SelectedIndex = -1;
+            //}
         }
     }
 }

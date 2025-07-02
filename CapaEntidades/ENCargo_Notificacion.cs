@@ -15,34 +15,36 @@ namespace CapaEntidades
         private string varANO_VALOR;
         private string varCODIGO;
         private string varID_NOTIFICADOR;
-        private string varNRO_VISITA;
+        private int varNRO_VISITA;
         private string varFLG_SITUACION;
         private string varF_NOTIFICA;
         private string varID_PARENTESCO;
         private string varNOMBRE;
         private string varNRO_DOCUMENTO;
-        private string varID_FIRMA;
+        private int varID_FIRMA;
         private string varDIREC_FISCAL;
-        private DateTime varF_VISITA1;
+        private DateTime? varF_VISITA1;
         private string varH_VISITA1;
-        private DateTime varF_VISITA2;
+        private DateTime? varF_VISITA2;
         private string varH_VISITA2;
-        private DateTime varF_CEDULON;
+        private DateTime? varF_CEDULON;
         private string varH_CEDULON;
         private string varDIR_CEDULON;
         private string varN_PISOS;
         private string varC_FACHADA;
         private string varN_SUMINISTRO;
         private string varOBSERVACION;
-        private string varDERIVAR_DRFT;
-        private string varESTADO;
+        private int varDERIVAR_DRFT;
+        private int varESTADO;
         private string varUSUARIO_REG;
         private string varESTACION_REG;
         private string varUSUARIO_ACT;
-        private DateTime varFECHA_ACT;
+        private DateTime? varFECHA_ACT;
         private string varESTACION_ACT;
         private decimal varMONTO;
-
+        private string varOTRO_CEDULON;
+        private DateTime varFECHA_VENCIMIENTO;
+        private string varPARENTESCO_DETALLE;
         public string NUM_CARGO
         {
             get
@@ -127,7 +129,7 @@ namespace CapaEntidades
             }
         }
 
-        public string NRO_VISITA
+        public int NRO_VISITA
         {
             get
             {
@@ -199,7 +201,7 @@ namespace CapaEntidades
             }
         }
 
-        public string ID_FIRMA
+        public int ID_FIRMA
         {
             get
             {
@@ -223,7 +225,7 @@ namespace CapaEntidades
             }
         }
 
-        public DateTime F_VISITA1
+        public DateTime? F_VISITA1
         {
             get
             {
@@ -247,7 +249,7 @@ namespace CapaEntidades
             }
         }
 
-        public DateTime F_VISITA2
+        public DateTime? F_VISITA2
         {
             get
             {
@@ -271,7 +273,7 @@ namespace CapaEntidades
             }
         }
 
-        public DateTime F_CEDULON
+        public DateTime? F_CEDULON
         {
             get
             {
@@ -355,7 +357,7 @@ namespace CapaEntidades
             }
         }
 
-        public string DERIVAR_DRFT
+        public int DERIVAR_DRFT
         {
             get
             {
@@ -367,7 +369,7 @@ namespace CapaEntidades
             }
         }
 
-        public string ESTADO
+        public int ESTADO
         {
             get
             {
@@ -415,7 +417,7 @@ namespace CapaEntidades
             }
         }
 
-        public DateTime FECHA_ACT
+        public DateTime? FECHA_ACT
         {
             get
             {
@@ -448,6 +450,39 @@ namespace CapaEntidades
             set
             {
                 varMONTO = value;
+            }
+        }
+        public string OTRO_CEDULON
+        {
+            get
+            {
+                return varOTRO_CEDULON;
+            }
+            set
+            {
+                varOTRO_CEDULON = value;
+            }
+        }
+        public DateTime FECHA_VENCIMIENTO
+        {
+            get
+            {
+                return varFECHA_VENCIMIENTO;
+            }
+            set
+            {
+                varFECHA_VENCIMIENTO = value;
+            }
+        }
+        public string PARENTESCO_DETALLE
+        {
+            get
+            {
+                return varPARENTESCO_DETALLE;
+            }
+            set
+            {
+                varPARENTESCO_DETALLE = value;
             }
         }
     }

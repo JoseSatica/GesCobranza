@@ -21,14 +21,14 @@ namespace CapaPresentacion
         }
         private void cargarComboGestores()
         {
-            comboGestores = NVerCartera.CargarComboGestores();
-            foreach (DataRow item in comboGestores.Rows)
-            {
-                if (comboGestores.Rows.Count > 0)
-                {
-                    CbxGestor.Items.Add(item["cod_gestor"].ToString().Trim());
-                }
-            }
+            //comboGestores = NVerCartera.CargarComboGestores();
+            //foreach (DataRow item in comboGestores.Rows)
+            //{
+            //    if (comboGestores.Rows.Count > 0)
+            //    {
+            //        CbxGestor.Items.Add(item["cod_gestor"].ToString().Trim());
+            //    }
+            //}
         }
 
         private async void BtnBuscar_Click(object sender, EventArgs e)
@@ -100,6 +100,11 @@ namespace CapaPresentacion
             {
                 CbxGestor.SelectedIndex = -1;
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

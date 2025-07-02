@@ -69,7 +69,7 @@
             this.LblCodContri.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblCodContri.AutoSize = true;
             this.LblCodContri.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCodContri.ForeColor = System.Drawing.Color.White;
+            this.LblCodContri.ForeColor = System.Drawing.Color.Black;
             this.LblCodContri.Location = new System.Drawing.Point(28, 33);
             this.LblCodContri.Name = "LblCodContri";
             this.LblCodContri.Size = new System.Drawing.Size(71, 17);
@@ -81,7 +81,7 @@
             this.LblNomContri.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNomContri.AutoSize = true;
             this.LblNomContri.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNomContri.ForeColor = System.Drawing.Color.White;
+            this.LblNomContri.ForeColor = System.Drawing.Color.Black;
             this.LblNomContri.Location = new System.Drawing.Point(151, 33);
             this.LblNomContri.Name = "LblNomContri";
             this.LblNomContri.Size = new System.Drawing.Size(77, 17);
@@ -91,11 +91,11 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
             this.groupBox1.Controls.Add(this.LblNomContri);
             this.groupBox1.Controls.Add(this.LblCodContri);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 47);
+            this.groupBox1.Location = new System.Drawing.Point(28, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1179, 63);
             this.groupBox1.TabIndex = 3;
@@ -105,7 +105,7 @@
             // gbxPersona
             // 
             this.gbxPersona.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gbxPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
+            this.gbxPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
             this.gbxPersona.Controls.Add(this.TxtParentPersNoti);
             this.gbxPersona.Controls.Add(this.TxtEdadPersNoti);
             this.gbxPersona.Controls.Add(this.TxtDniPersNoti);
@@ -115,7 +115,7 @@
             this.gbxPersona.Controls.Add(this.label5);
             this.gbxPersona.Controls.Add(this.label4);
             this.gbxPersona.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxPersona.Location = new System.Drawing.Point(12, 301);
+            this.gbxPersona.Location = new System.Drawing.Point(28, 301);
             this.gbxPersona.Name = "gbxPersona";
             this.gbxPersona.Size = new System.Drawing.Size(1179, 186);
             this.gbxPersona.TabIndex = 4;
@@ -200,7 +200,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(28, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 17);
@@ -212,7 +212,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(28, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 17);
@@ -224,7 +224,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(28, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 17);
@@ -236,7 +236,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(28, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 17);
@@ -248,7 +248,7 @@
             this.lblObservacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblObservacion.AutoSize = true;
             this.lblObservacion.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservacion.ForeColor = System.Drawing.Color.White;
+            this.lblObservacion.ForeColor = System.Drawing.Color.Black;
             this.lblObservacion.Location = new System.Drawing.Point(541, 46);
             this.lblObservacion.Name = "lblObservacion";
             this.lblObservacion.Size = new System.Drawing.Size(126, 17);
@@ -276,7 +276,7 @@
             this.lblSeguimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSeguimiento.AutoSize = true;
             this.lblSeguimiento.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeguimiento.ForeColor = System.Drawing.Color.White;
+            this.lblSeguimiento.ForeColor = System.Drawing.Color.Black;
             this.lblSeguimiento.Location = new System.Drawing.Point(28, 49);
             this.lblSeguimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSeguimiento.Name = "lblSeguimiento";
@@ -297,13 +297,12 @@
             this.groupBox5.Controls.Add(this.BtnGrabar);
             this.groupBox5.Controls.Add(this.lblObservacion);
             this.groupBox5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(12, 122);
+            this.groupBox5.Location = new System.Drawing.Point(28, 122);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1179, 173);
             this.groupBox5.TabIndex = 18;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ACTUALIZAR GESTION";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // CbxSeguimiento
             // 
@@ -376,7 +375,7 @@
             this.lblFechaPorGestionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFechaPorGestionar.AutoSize = true;
             this.lblFechaPorGestionar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPorGestionar.ForeColor = System.Drawing.Color.White;
+            this.lblFechaPorGestionar.ForeColor = System.Drawing.Color.Black;
             this.lblFechaPorGestionar.Location = new System.Drawing.Point(28, 93);
             this.lblFechaPorGestionar.Name = "lblFechaPorGestionar";
             this.lblFechaPorGestionar.Size = new System.Drawing.Size(217, 17);
@@ -388,11 +387,11 @@
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(12, 499);
+            this.label21.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(25, 490);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(186, 17);
+            this.label21.Size = new System.Drawing.Size(151, 14);
             this.label21.TabIndex = 19;
             this.label21.Text = "CAMPOS OBLIGATORIOS (*)";
             // 
@@ -416,7 +415,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.White;
             this.btnSalir.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(1070, 493);
+            this.btnSalir.Location = new System.Drawing.Point(1086, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(104, 59);
             this.btnSalir.TabIndex = 72;
@@ -426,11 +425,10 @@
             // 
             // FrmCarteraGestionDetalle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1203, 583);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
+            this.ClientSize = new System.Drawing.Size(1234, 680);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox5);
@@ -438,6 +436,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCarteraGestionDetalle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmCarteraGestionDetalle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

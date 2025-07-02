@@ -10,7 +10,7 @@ namespace CapaPresentacion
     public partial class FrmActualizarJefe : Form
     {
         private DataTable comboGestor;
-        private int id_gestor;
+        private string id_gestor;
         private DataTable TablaEnvio;
         private decimal monto;
 
@@ -28,17 +28,15 @@ namespace CapaPresentacion
             LblCodGestor.Text = Variables.gestor.ToUpper();
             LblMonto.Text = Variables.monto.ToUpper();
             cargarComboGestores();
+            CbxGestorNuevo.Items.Remove("JOSE ");
         }
         private void cargarComboGestores()
         {
-            comboGestor = NVerCartera.CargarComboGestores();
-            foreach (DataRow fila in comboGestor.Rows)
-            {
-                if (fila["cod_gestor"].ToString() != Variables.gestor && Convert.ToInt32(fila["permiso"].ToString()) == 1)
-                {
-                    CbxGestorNuevo.Items.Add(fila["cod_gestor"].ToString().Trim());
-                }
-            }
+            comboGestor = NVerCartera.CargarDGVGestores();
+            CbxGestorNuevo.DataSource = comboGestor;
+            CbxGestorNuevo.DisplayMember = "gestor";
+            CbxGestorNuevo.ValueMember = "gestor";
+            
         }
 
         private async void BtnActualizarCartera_Click(object sender, EventArgs e)
@@ -59,10 +57,13 @@ namespace CapaPresentacion
                         using (TransactionScope transaccion = new TransactionScope())
                         {
                             NCarteraDetalle.ActualizarEstadoCartera(4, Variables.id_cartera);
-                            NAsignarMasivo.EnviarCartera(id_gestor, Variables.codigo, 1, 1, monto);
+                            DataTable idcarter = NAsignarMasivo.EnviarCartera(CbxGestorNuevo.SelectedValue.ToString(), Variables.codigo, 1, 1, monto);
+
+                            NCarteraDetalle.InsertarDetalleGestion(Convert.ToInt32(idcarter.Rows[0]["id"].ToString()), 1, "", "", "", "", "", monto, "", Environment.UserName.ToString(), Environment.MachineName.ToString(), Variables.cod_usuario);
                             PtbLoad.Visible = false;
                             MessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             transaccion.Complete();
+                            this.Close();
                         }
                     }                    
                 }
@@ -82,7 +83,7 @@ namespace CapaPresentacion
         {
             try
             {
-                TablaEnvio = NGestion.CalcularDeuda(Variables.codigo, "", "", "", "", "", "0");
+                TablaEnvio = NGestion.CalcularDeuda(Variables.codigo, "", "*02.30*,*02.01*,*00.16*,*30.02*,*30.03*,*30.04*,*30.82*,*25.04*,*11.00*,*02.30*,*00.38*,*00.30*,*25.10*,**", "", "", "", "0");
                 int contador = 0;
                 monto = 0;
                 foreach (DataRow row in TablaEnvio.Rows)
@@ -107,17 +108,17 @@ namespace CapaPresentacion
 
         private void CbxGestorNuevo_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            foreach (DataRow item in comboGestor.Rows)
-            {
-                if (CbxGestorNuevo.Text.Trim() == item["cod_gestor"].ToString().Trim())
-                {
-                    id_gestor = Convert.ToInt32(item["id_gestor"].ToString().Trim());
-                }
-            }
-            if (CbxGestorNuevo.SelectedIndex == 0)
-            {
-                CbxGestorNuevo.SelectedIndex = -1;
-            }
+            //foreach (DataRow item in comboGestor.Rows)
+            //{
+            //    if (CbxGestorNuevo.Text.Trim() == item["gestor"].ToString().Trim())
+            //    {
+            //        id_gestor = item["gestor"].ToString().Trim();
+            //    }
+            //}
+            //if (CbxGestorNuevo.SelectedIndex == 0)
+            //{
+            //    CbxGestorNuevo.SelectedIndex = -1;
+            //}
         }
     }
 }

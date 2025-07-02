@@ -70,7 +70,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(594, 67);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -85,7 +85,7 @@
             this.groupBox1.Controls.Add(this.DtpIni);
             this.groupBox1.Controls.Add(this.DtpFin);
             this.groupBox1.Controls.Add(this.LblHasta);
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(18, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(369, 59);
@@ -98,7 +98,7 @@
             this.LblDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblDesde.AutoSize = true;
             this.LblDesde.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDesde.ForeColor = System.Drawing.Color.White;
+            this.LblDesde.ForeColor = System.Drawing.Color.Black;
             this.LblDesde.Location = new System.Drawing.Point(11, 30);
             this.LblDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDesde.Name = "LblDesde";
@@ -135,7 +135,7 @@
             this.LblHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblHasta.AutoSize = true;
             this.LblHasta.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHasta.ForeColor = System.Drawing.Color.White;
+            this.LblHasta.ForeColor = System.Drawing.Color.Black;
             this.LblHasta.Location = new System.Drawing.Point(192, 30);
             this.LblHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblHasta.Name = "LblHasta";
@@ -148,7 +148,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(286, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -161,7 +161,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(286, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -174,7 +174,7 @@
             this.LblGestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblGestor.AutoSize = true;
             this.LblGestor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGestor.ForeColor = System.Drawing.Color.White;
+            this.LblGestor.ForeColor = System.Drawing.Color.Black;
             this.LblGestor.Location = new System.Drawing.Point(907, 34);
             this.LblGestor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGestor.Name = "LblGestor";
@@ -204,7 +204,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(597, 34);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -232,7 +232,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(15, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -245,7 +245,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(15, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -284,7 +284,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.DgvCartera.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvCartera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCartera.Size = new System.Drawing.Size(1133, 430);
+            this.DgvCartera.Size = new System.Drawing.Size(1133, 371);
             this.DgvCartera.TabIndex = 80;
             this.DgvCartera.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCartera_CellContentClick);
             // 
@@ -309,7 +309,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(18, 12);
+            this.groupBox2.Location = new System.Drawing.Point(13, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1183, 180);
             this.groupBox2.TabIndex = 82;
@@ -456,19 +456,21 @@
             this.groupBox3.Controls.Add(this.ptbLoad3);
             this.groupBox3.Controls.Add(this.DgvCartera);
             this.groupBox3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(19, 198);
+            this.groupBox3.Location = new System.Drawing.Point(14, 198);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1182, 458);
+            this.groupBox3.Size = new System.Drawing.Size(1182, 401);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PRE VISUALIZACION";
             // 
             // ptbLoad3
             // 
+            this.ptbLoad3.BackColor = System.Drawing.Color.White;
+            this.ptbLoad3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbLoad3.Image = global::CapaPresentacion.Properties.Resources.icons8_spinner;
-            this.ptbLoad3.Location = new System.Drawing.Point(12, 22);
+            this.ptbLoad3.Location = new System.Drawing.Point(3, 21);
             this.ptbLoad3.Name = "ptbLoad3";
-            this.ptbLoad3.Size = new System.Drawing.Size(1143, 430);
+            this.ptbLoad3.Size = new System.Drawing.Size(1176, 377);
             this.ptbLoad3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ptbLoad3.TabIndex = 83;
             this.ptbLoad3.TabStop = false;
@@ -476,14 +478,15 @@
             // 
             // FrmReporteCartera
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1219, 690);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
+            this.ClientSize = new System.Drawing.Size(1209, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmReporteCartera";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmReporteCartera";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteCartera_Load);

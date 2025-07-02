@@ -2,14 +2,17 @@
 <xs:schema id="DsReporteCartera" targetNamespace="http://tempuri.org/DsReporteCartera.xsd" xmlns:mstns="http://tempuri.org/DsReporteCartera.xsd" xmlns="http://tempuri.org/DsReporteCartera.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BASE_SIGMUN_AuthWin" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BASE_SIGMUN_AuthWin (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaPresentacion.Properties.Settings.GlobalReference.Default.BASE_SIGMUN_AuthWin" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BASE_SIGMUN_SqlAunth" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BASE_SIGMUN_SqlAunth (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaPresentacion.Properties.Settings.GlobalReference.Default.BASE_SIGMUN_SqlAunth" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BASE_SIGMUNConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BASE_SIGMUNConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaPresentacion.Properties.Settings.GlobalReference.Default.BASE_SIGMUNConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BASE_SIGMUN" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BASE_SIGMUN (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaPresentacion.Properties.Settings.GlobalReference.Default.BASE_SIGMUN" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteGestionCarteraTableAdapter" GeneratorDataComponentClassName="ReporteGestionCarteraTableAdapter" Name="ReporteGestionCartera" UserDataComponentName="ReporteGestionCarteraTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BASE_SIGMUNConnectionString (Settings)" DbObjectName="BASE_SIGMUN.Reports.ReporteGestionCartera" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BASE_SIGMUN (Settings)" DbObjectName="BASE_SIGMUN.Reports.ReporteGestionCartera" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>Reports.ReporteGestionCartera</CommandText>
@@ -34,10 +37,12 @@
               <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
               <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
               <Mapping SourceColumn="Contribuyente" DataSetColumn="Contribuyente" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
               <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
               <Mapping SourceColumn="Seguimiento" DataSetColumn="Seguimiento" />
               <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
               <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="fecha_a_gestionar" DataSetColumn="fecha_a_gestionar" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -62,7 +67,7 @@
               <xs:element name="Tipo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="7" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -80,6 +85,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Direccion" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_UserColumnName="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" type="xs:decimal" minOccurs="0" />
               <xs:element name="Seguimiento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="SeguimientoColumn" msprop:Generator_ColumnPropNameInRow="Seguimiento" msprop:Generator_UserColumnName="Seguimiento" msprop:Generator_ColumnVarNameInTable="columnSeguimiento" minOccurs="0">
                 <xs:simpleType>
@@ -93,6 +105,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_a_gestionar" msprop:Generator_ColumnPropNameInTable="fecha_a_gestionarColumn" msprop:Generator_ColumnPropNameInRow="fecha_a_gestionar" msprop:Generator_UserColumnName="fecha_a_gestionar" msprop:Generator_ColumnVarNameInTable="columnfecha_a_gestionar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

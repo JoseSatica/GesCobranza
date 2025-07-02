@@ -123,6 +123,36 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_legal {
+            get {
+                object obj = ResourceManager.GetObject("delete_legal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_legal__1_ {
+            get {
+                object obj = ResourceManager.GetObject("delete_legal (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editarcosta {
+            get {
+                object obj = ResourceManager.GetObject("editarcosta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap empleados_b {
             get {
                 object obj = ResourceManager.GetObject("empleados_b", resourceCulture);
@@ -213,6 +243,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_sat1_marca_de_agua_ {
+            get {
+                object obj = ResourceManager.GetObject("logo_sat1(marca_de_agua)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_sat11 {
             get {
                 object obj = ResourceManager.GetObject("logo_sat11", resourceCulture);
@@ -236,6 +276,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap quitar_usuario_para_boton {
             get {
                 object obj = ResourceManager.GetObject("quitar usuario para boton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ver_bandeja {
+            get {
+                object obj = ResourceManager.GetObject("ver_bandeja", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

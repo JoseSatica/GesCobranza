@@ -110,11 +110,11 @@ namespace CapaPresentacion
             this.TxtCodUsuario.Border.Class = "TextBoxBorder";
             this.TxtCodUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TxtCodUsuario.FocusHighlightEnabled = true;
-            this.TxtCodUsuario.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodUsuario.Location = new System.Drawing.Point(84, 134);
             this.TxtCodUsuario.Name = "TxtCodUsuario";
             this.TxtCodUsuario.PreventEnterBeep = true;
-            this.TxtCodUsuario.Size = new System.Drawing.Size(179, 25);
+            this.TxtCodUsuario.Size = new System.Drawing.Size(179, 27);
             this.TxtCodUsuario.TabIndex = 21;
             this.TxtCodUsuario.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodUsuario.WatermarkText = "Usuario";
@@ -127,15 +127,16 @@ namespace CapaPresentacion
             this.TxtClave.Border.Class = "TextBoxBorder";
             this.TxtClave.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TxtClave.FocusHighlightEnabled = true;
-            this.TxtClave.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtClave.Location = new System.Drawing.Point(84, 183);
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.PasswordChar = '*';
             this.TxtClave.PreventEnterBeep = true;
-            this.TxtClave.Size = new System.Drawing.Size(179, 25);
+            this.TxtClave.Size = new System.Drawing.Size(179, 27);
             this.TxtClave.TabIndex = 22;
             this.TxtClave.WatermarkFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtClave.WatermarkText = "Contraseña";
+            this.TxtClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtClave_KeyDown);
             // 
             // Login
             // 

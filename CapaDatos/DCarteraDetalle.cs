@@ -102,7 +102,6 @@ namespace CapaDatos
                 comando.Parameters.Add("@id_cartera", SqlDbType.Int).Value = id_cartera;
                 comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario;
 
-
                 Sqlcon.Open();
                 Resultado = comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -164,6 +163,37 @@ namespace CapaDatos
                 comando.Parameters.Add("@id_estado", SqlDbType.VarChar).Value = id_estado;
                 comando.Parameters.Add("@id_cartera", SqlDbType.VarChar).Value = id_cartera;
 
+                Sqlcon.Open();
+                Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO SE PUDO ACTUALIZAR";
+
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (Sqlcon.State == ConnectionState.Open) Sqlcon.Close();
+            }
+            return Rpta;
+        }
+        public string ActualizarEstadoDetalleCartera(int id_detalle_cartera,string usuario, string uregistro, string pcregistro)
+        {
+            string Rpta = "";
+
+            SqlConnection Sqlcon = new SqlConnection();
+
+            try
+            {
+                Sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Gestion.GestionCartera", Sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandTimeout = 2600;
+                comando.Parameters.Add("@buscar", SqlDbType.Int).Value = 25;
+                comando.Parameters.Add("@id_detalle_cartera", SqlDbType.Int).Value = id_detalle_cartera;
+                comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario;
+                comando.Parameters.Add("@uregistro", SqlDbType.VarChar).Value = uregistro;
+                comando.Parameters.Add("@pcregistro", SqlDbType.VarChar).Value = pcregistro;
                 Sqlcon.Open();
                 Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "NO SE PUDO ACTUALIZAR";
 

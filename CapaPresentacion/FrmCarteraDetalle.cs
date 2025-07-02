@@ -23,9 +23,7 @@ namespace CapaPresentacion
         private void cargarDgvCarteraDetalle()
         {
             DgvCarteraDetalle.DataSource = NCarteraDetalle.CargarDetalleCarteraCabecera(Variables.id_cartera, Variables.gestor);
-        }
-
-       
+        }       
        
         private void OcultarColumna()
         {
@@ -77,6 +75,7 @@ namespace CapaPresentacion
        
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Close();
             this.Close();
         }
     }

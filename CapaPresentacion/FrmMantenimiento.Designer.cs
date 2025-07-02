@@ -53,12 +53,12 @@
             // 
             this.LblGestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblGestor.AutoSize = true;
-            this.LblGestor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGestor.ForeColor = System.Drawing.Color.White;
-            this.LblGestor.Location = new System.Drawing.Point(52, 81);
+            this.LblGestor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGestor.ForeColor = System.Drawing.Color.Black;
+            this.LblGestor.Location = new System.Drawing.Point(52, 77);
             this.LblGestor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGestor.Name = "LblGestor";
-            this.LblGestor.Size = new System.Drawing.Size(78, 17);
+            this.LblGestor.Size = new System.Drawing.Size(72, 17);
             this.LblGestor.TabIndex = 53;
             this.LblGestor.Text = "USUARIOS:";
             // 
@@ -89,12 +89,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 149);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(52, 147);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 17);
+            this.label2.Size = new System.Drawing.Size(144, 20);
             this.label2.TabIndex = 59;
             this.label2.Text = "LISTA DE GESTORES:";
             // 
@@ -102,7 +102,7 @@
             // 
             this.BtnDarPermiso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnDarPermiso.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnDarPermiso.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDarPermiso.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDarPermiso.ForeColor = System.Drawing.Color.Black;
             this.BtnDarPermiso.Location = new System.Drawing.Point(601, 279);
             this.BtnDarPermiso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -118,7 +118,7 @@
             // 
             this.BtnQuitarPermiso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnQuitarPermiso.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnQuitarPermiso.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnQuitarPermiso.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnQuitarPermiso.ForeColor = System.Drawing.Color.Black;
             this.BtnQuitarPermiso.Location = new System.Drawing.Point(601, 344);
             this.BtnQuitarPermiso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -134,12 +134,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(94, 417);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(94, 410);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 64;
             this.label1.Text = "SIN PERMISO";
             this.label1.Visible = false;
@@ -148,12 +148,12 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(94, 453);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(94, 446);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 65;
             this.label3.Text = "CON PERMISO";
             this.label3.Visible = false;
@@ -162,7 +162,7 @@
             // 
             this.BtnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEliminar.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnEliminar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
             this.BtnEliminar.Image = global::CapaPresentacion.Properties.Resources.quitar_usuario_para_boton;
             this.BtnEliminar.Location = new System.Drawing.Point(601, 167);
@@ -201,7 +201,7 @@
             // 
             this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnAgregar.BackColor = System.Drawing.Color.GhostWhite;
-            this.BtnAgregar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Black;
             this.BtnAgregar.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario_para_boton;
             this.BtnAgregar.Location = new System.Drawing.Point(600, 46);
@@ -229,8 +229,8 @@
             this.groupBox1.Controls.Add(this.BtnAgregar);
             this.groupBox1.Controls.Add(this.DgvGestores);
             this.groupBox1.Controls.Add(this.LblGestor);
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(244, 28);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(137, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(759, 498);
             this.groupBox1.TabIndex = 67;
@@ -244,7 +244,7 @@
             this.CbxUsuarios.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CbxUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxUsuarios.FocusHighlightEnabled = true;
-            this.CbxUsuarios.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxUsuarios.FormattingEnabled = true;
             this.CbxUsuarios.ItemHeight = 20;
             this.CbxUsuarios.Items.AddRange(new object[] {
@@ -260,13 +260,13 @@
             // 
             // FrmMantenimiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
-            this.ClientSize = new System.Drawing.Size(1214, 558);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(172)))), ((int)(((byte)(201)))));
+            this.ClientSize = new System.Drawing.Size(1234, 680);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMantenimiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMantenimiento";
             this.Load += new System.EventHandler(this.FrmMantenimiento_Load);
             this.Shown += new System.EventHandler(this.FrmMantenimiento_Shown);

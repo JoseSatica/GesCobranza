@@ -12,7 +12,7 @@ namespace CapaPresentacion.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -42,6 +42,49 @@ namespace CapaPresentacion.Properties {
         public string BASE_SIGMUNConnectionString {
             get {
                 return ((string)(this["BASE_SIGMUNConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.206;Initial Catalog=BASE_SIGMUN;Persist Security Info=True;" +
+            "User ID=sa;Password=Satica2023$$")]
+        public string BDSISTEMA {
+            get {
+                return ((string)(this["BDSISTEMA"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.201;Initial Catalog=BASE_SIGMUN;Integrated Security=True")]
+        public string BASE_SIGMUN_AuthWin {
+            get {
+                return ((string)(this["BASE_SIGMUN_AuthWin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.201;Initial Catalog=BASE_SIGMUN;User ID=dba;Password=P0ducc" +
+            "10n")]
+        public string BASE_SIGMUN_SqlAunth {
+            get {
+                return ((string)(this["BASE_SIGMUN_SqlAunth"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.201;Initial Catalog=BASE_SIGMUN;User ID=usr_sa;Password=L3g" +
+            "10n261$;TrustServerCertificate=True")]
+        public string BASE_SIGMUN {
+            get {
+                return ((string)(this["BASE_SIGMUN"]));
             }
         }
     }
