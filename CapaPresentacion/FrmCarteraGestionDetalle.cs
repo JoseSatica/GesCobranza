@@ -28,9 +28,15 @@ namespace CapaPresentacion{
                 CbxSeguimiento.Items.Add(fila["deta_seguimiento"].ToString().Trim());
             }
         }
-        private void validarContorles(){
+        private void validarControles(){
             validarSeguimiento = "";
             validarObservacion = "";
+            if(CbxSeguimiento.Text == "OBSERVADO" && TxtObserNoti.Text=="")
+            {
+                EpSeguimiento.SetError(CbxSeguimiento, "DEBE INGRESAR UNA OBSERVACION");
+                return;
+
+            }
             if (CbxSeguimiento.Text.Trim() == seguimiento || CbxSeguimiento.Text == "" || CbxSeguimiento.Text.Trim() == "Inicio"){
                 EpSeguimiento.SetError(CbxSeguimiento, "DEBE SELECCIONAR UN SEGUIMIENTO DIFERENTE AL ACTUAL");
             }
@@ -49,7 +55,7 @@ namespace CapaPresentacion{
         private async void BtnGrabar_Click(object sender, EventArgs e){
            // string fecha = (DtpFechPagNoti.Checked) ? DtpFechPagNoti.Text : "";
             string fecha_por_gestionar = (DtpPorGestionar.Checked) ? DtpPorGestionar.Text : "";
-            validarContorles();
+            validarControles();
             if (validarSeguimiento == "OK" && validarObservacion == "OK"){
                 DialogResult resultado = MessageBox.Show("¿DESEA ACTUALIZAR SU GESTION?", "SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes){
