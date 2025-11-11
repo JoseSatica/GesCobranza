@@ -113,7 +113,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.LblNom);
             this.groupBox1.Controls.Add(this.TxtNombre);
             this.groupBox1.Controls.Add(this.LblMaterno);
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(18, 24);
             this.groupBox1.Name = "groupBox1";
@@ -127,11 +127,11 @@ namespace CapaPresentacion
             // 
             this.LblCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblCodigo.AutoSize = true;
-            this.LblCodigo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCodigo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodigo.ForeColor = System.Drawing.Color.White;
             this.LblCodigo.Location = new System.Drawing.Point(15, 81);
             this.LblCodigo.Name = "LblCodigo";
-            this.LblCodigo.Size = new System.Drawing.Size(61, 19);
+            this.LblCodigo.Size = new System.Drawing.Size(48, 13);
             this.LblCodigo.TabIndex = 55;
             this.LblCodigo.Text = "Codigo:";
             this.LblCodigo.Visible = false;
@@ -140,11 +140,11 @@ namespace CapaPresentacion
             // 
             this.LblDoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblDoc.AutoSize = true;
-            this.LblDoc.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDoc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDoc.ForeColor = System.Drawing.Color.White;
             this.LblDoc.Location = new System.Drawing.Point(15, 80);
             this.LblDoc.Name = "LblDoc";
-            this.LblDoc.Size = new System.Drawing.Size(93, 19);
+            this.LblDoc.Size = new System.Drawing.Size(71, 13);
             this.LblDoc.TabIndex = 56;
             this.LblDoc.Text = "Documento:";
             this.LblDoc.Visible = false;
@@ -152,30 +152,30 @@ namespace CapaPresentacion
             // TxtApellidoMaterno
             // 
             this.TxtApellidoMaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtApellidoMaterno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellidoMaterno.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoMaterno.Location = new System.Drawing.Point(928, 68);
             this.TxtApellidoMaterno.Name = "TxtApellidoMaterno";
-            this.TxtApellidoMaterno.Size = new System.Drawing.Size(249, 26);
+            this.TxtApellidoMaterno.Size = new System.Drawing.Size(249, 22);
             this.TxtApellidoMaterno.TabIndex = 63;
             this.TxtApellidoMaterno.Visible = false;
             // 
             // TxtSubLote
             // 
             this.TxtSubLote.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtSubLote.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSubLote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSubLote.Location = new System.Drawing.Point(641, 121);
             this.TxtSubLote.Name = "TxtSubLote";
-            this.TxtSubLote.Size = new System.Drawing.Size(41, 26);
+            this.TxtSubLote.Size = new System.Drawing.Size(41, 22);
             this.TxtSubLote.TabIndex = 54;
             this.TxtSubLote.Visible = false;
             // 
             // TxtNomUrb
             // 
             this.TxtNomUrb.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtNomUrb.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomUrb.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNomUrb.Location = new System.Drawing.Point(899, 68);
             this.TxtNomUrb.Name = "TxtNomUrb";
-            this.TxtNomUrb.Size = new System.Drawing.Size(189, 26);
+            this.TxtNomUrb.Size = new System.Drawing.Size(189, 22);
             this.TxtNomUrb.TabIndex = 44;
             this.TxtNomUrb.Visible = false;
             // 
@@ -183,11 +183,11 @@ namespace CapaPresentacion
             // 
             this.LblSubLote.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblSubLote.AutoSize = true;
-            this.LblSubLote.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSubLote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSubLote.ForeColor = System.Drawing.Color.White;
             this.LblSubLote.Location = new System.Drawing.Point(562, 128);
             this.LblSubLote.Name = "LblSubLote";
-            this.LblSubLote.Size = new System.Drawing.Size(74, 19);
+            this.LblSubLote.Size = new System.Drawing.Size(56, 13);
             this.LblSubLote.TabIndex = 53;
             this.LblSubLote.Text = "Sub Lote:";
             this.LblSubLote.Visible = false;
@@ -196,11 +196,11 @@ namespace CapaPresentacion
             // 
             this.LblPaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblPaterno.AutoSize = true;
-            this.LblPaterno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPaterno.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPaterno.ForeColor = System.Drawing.Color.White;
             this.LblPaterno.Location = new System.Drawing.Point(387, 76);
             this.LblPaterno.Name = "LblPaterno";
-            this.LblPaterno.Size = new System.Drawing.Size(136, 19);
+            this.LblPaterno.Size = new System.Drawing.Size(103, 13);
             this.LblPaterno.TabIndex = 61;
             this.LblPaterno.Text = "Apellidos Paterno:";
             this.LblPaterno.Visible = false;
@@ -209,11 +209,11 @@ namespace CapaPresentacion
             // 
             this.LblNomUrb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNomUrb.AutoSize = true;
-            this.LblNomUrb.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNomUrb.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNomUrb.ForeColor = System.Drawing.Color.White;
             this.LblNomUrb.Location = new System.Drawing.Point(793, 76);
             this.LblNomUrb.Name = "LblNomUrb";
-            this.LblNomUrb.Size = new System.Drawing.Size(100, 19);
+            this.LblNomUrb.Size = new System.Drawing.Size(75, 13);
             this.LblNomUrb.TabIndex = 43;
             this.LblNomUrb.Text = "Nombre Urb:";
             this.LblNomUrb.Visible = false;
@@ -221,10 +221,10 @@ namespace CapaPresentacion
             // TxtLote
             // 
             this.TxtLote.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtLote.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLote.Location = new System.Drawing.Point(474, 121);
             this.TxtLote.Name = "TxtLote";
-            this.TxtLote.Size = new System.Drawing.Size(41, 26);
+            this.TxtLote.Size = new System.Drawing.Size(41, 22);
             this.TxtLote.TabIndex = 52;
             this.TxtLote.Visible = false;
             // 
@@ -232,11 +232,11 @@ namespace CapaPresentacion
             // 
             this.LblLote.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblLote.AutoSize = true;
-            this.LblLote.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLote.ForeColor = System.Drawing.Color.White;
             this.LblLote.Location = new System.Drawing.Point(424, 128);
             this.LblLote.Name = "LblLote";
-            this.LblLote.Size = new System.Drawing.Size(44, 19);
+            this.LblLote.Size = new System.Drawing.Size(33, 13);
             this.LblLote.TabIndex = 51;
             this.LblLote.Text = "Lote:";
             this.LblLote.Visible = false;
@@ -244,20 +244,20 @@ namespace CapaPresentacion
             // TxtCodContri
             // 
             this.TxtCodContri.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtCodContri.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodContri.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodContri.Location = new System.Drawing.Point(82, 73);
             this.TxtCodContri.Name = "TxtCodContri";
-            this.TxtCodContri.Size = new System.Drawing.Size(137, 26);
+            this.TxtCodContri.Size = new System.Drawing.Size(137, 22);
             this.TxtCodContri.TabIndex = 8;
             this.TxtCodContri.Visible = false;
             // 
             // TxtMza
             // 
             this.TxtMza.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtMza.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMza.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMza.Location = new System.Drawing.Point(340, 121);
             this.TxtMza.Name = "TxtMza";
-            this.TxtMza.Size = new System.Drawing.Size(41, 26);
+            this.TxtMza.Size = new System.Drawing.Size(41, 22);
             this.TxtMza.TabIndex = 50;
             this.TxtMza.Visible = false;
             // 
@@ -265,11 +265,11 @@ namespace CapaPresentacion
             // 
             this.LblMza.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblMza.AutoSize = true;
-            this.LblMza.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMza.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMza.ForeColor = System.Drawing.Color.White;
             this.LblMza.Location = new System.Drawing.Point(293, 128);
             this.LblMza.Name = "LblMza";
-            this.LblMza.Size = new System.Drawing.Size(41, 19);
+            this.LblMza.Size = new System.Drawing.Size(32, 13);
             this.LblMza.TabIndex = 49;
             this.LblMza.Text = "Mza:";
             this.LblMza.Visible = false;
@@ -277,20 +277,20 @@ namespace CapaPresentacion
             // TxtDniContri
             // 
             this.TxtDniContri.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtDniContri.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDniContri.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDniContri.Location = new System.Drawing.Point(114, 73);
             this.TxtDniContri.Name = "TxtDniContri";
-            this.TxtDniContri.Size = new System.Drawing.Size(137, 26);
+            this.TxtDniContri.Size = new System.Drawing.Size(137, 22);
             this.TxtDniContri.TabIndex = 13;
             this.TxtDniContri.Visible = false;
             // 
             // TxtDpto
             // 
             this.TxtDpto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtDpto.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDpto.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDpto.Location = new System.Drawing.Point(205, 121);
             this.TxtDpto.Name = "TxtDpto";
-            this.TxtDpto.Size = new System.Drawing.Size(41, 26);
+            this.TxtDpto.Size = new System.Drawing.Size(41, 22);
             this.TxtDpto.TabIndex = 48;
             this.TxtDpto.Visible = false;
             // 
@@ -298,11 +298,11 @@ namespace CapaPresentacion
             // 
             this.LblDpto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblDpto.AutoSize = true;
-            this.LblDpto.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDpto.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDpto.ForeColor = System.Drawing.Color.White;
             this.LblDpto.Location = new System.Drawing.Point(152, 128);
             this.LblDpto.Name = "LblDpto";
-            this.LblDpto.Size = new System.Drawing.Size(47, 19);
+            this.LblDpto.Size = new System.Drawing.Size(36, 13);
             this.LblDpto.TabIndex = 47;
             this.LblDpto.Text = "Dpto:";
             this.LblDpto.Visible = false;
@@ -310,20 +310,20 @@ namespace CapaPresentacion
             // TxtCodPredio
             // 
             this.TxtCodPredio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtCodPredio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodPredio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodPredio.Location = new System.Drawing.Point(127, 74);
             this.TxtCodPredio.Name = "TxtCodPredio";
-            this.TxtCodPredio.Size = new System.Drawing.Size(137, 26);
+            this.TxtCodPredio.Size = new System.Drawing.Size(137, 22);
             this.TxtCodPredio.TabIndex = 15;
             this.TxtCodPredio.Visible = false;
             // 
             // TxtNum
             // 
             this.TxtNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtNum.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNum.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNum.Location = new System.Drawing.Point(89, 121);
             this.TxtNum.Name = "TxtNum";
-            this.TxtNum.Size = new System.Drawing.Size(41, 26);
+            this.TxtNum.Size = new System.Drawing.Size(41, 22);
             this.TxtNum.TabIndex = 46;
             this.TxtNum.Visible = false;
             // 
@@ -331,11 +331,11 @@ namespace CapaPresentacion
             // 
             this.LblNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNum.AutoSize = true;
-            this.LblNum.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNum.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNum.ForeColor = System.Drawing.Color.White;
             this.LblNum.Location = new System.Drawing.Point(15, 128);
             this.LblNum.Name = "LblNum";
-            this.LblNum.Size = new System.Drawing.Size(46, 19);
+            this.LblNum.Size = new System.Drawing.Size(36, 13);
             this.LblNum.TabIndex = 45;
             this.LblNum.Text = "Num:";
             this.LblNum.Visible = false;
@@ -344,11 +344,11 @@ namespace CapaPresentacion
             // 
             this.LblCodPred.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblCodPred.AutoSize = true;
-            this.LblCodPred.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCodPred.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodPred.ForeColor = System.Drawing.Color.White;
             this.LblCodPred.Location = new System.Drawing.Point(15, 80);
             this.LblCodPred.Name = "LblCodPred";
-            this.LblCodPred.Size = new System.Drawing.Size(93, 19);
+            this.LblCodPred.Size = new System.Drawing.Size(71, 13);
             this.LblCodPred.TabIndex = 38;
             this.LblCodPred.Text = "Cod. Predio:";
             this.LblCodPred.Visible = false;
@@ -356,20 +356,20 @@ namespace CapaPresentacion
             // TxtNomVia
             // 
             this.TxtNomVia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtNomVia.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomVia.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNomVia.Location = new System.Drawing.Point(615, 69);
             this.TxtNomVia.Name = "TxtNomVia";
-            this.TxtNomVia.Size = new System.Drawing.Size(172, 26);
+            this.TxtNomVia.Size = new System.Drawing.Size(172, 22);
             this.TxtNomVia.TabIndex = 42;
             this.TxtNomVia.Visible = false;
             // 
             // TxtApellidoPaterno
             // 
             this.TxtApellidoPaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtApellidoPaterno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellidoPaterno.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoPaterno.Location = new System.Drawing.Point(529, 69);
             this.TxtApellidoPaterno.Name = "TxtApellidoPaterno";
-            this.TxtApellidoPaterno.Size = new System.Drawing.Size(244, 26);
+            this.TxtApellidoPaterno.Size = new System.Drawing.Size(244, 22);
             this.TxtApellidoPaterno.TabIndex = 10;
             this.TxtApellidoPaterno.Visible = false;
             // 
@@ -377,11 +377,11 @@ namespace CapaPresentacion
             // 
             this.LblNomVia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNomVia.AutoSize = true;
-            this.LblNomVia.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNomVia.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNomVia.ForeColor = System.Drawing.Color.White;
             this.LblNomVia.Location = new System.Drawing.Point(513, 76);
             this.LblNomVia.Name = "LblNomVia";
-            this.LblNomVia.Size = new System.Drawing.Size(96, 19);
+            this.LblNomVia.Size = new System.Drawing.Size(72, 13);
             this.LblNomVia.TabIndex = 41;
             this.LblNomVia.Text = "Nombre Via:";
             this.LblNomVia.Visible = false;
@@ -389,7 +389,7 @@ namespace CapaPresentacion
             // CboAnio
             // 
             this.CboAnio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CboAnio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboAnio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboAnio.FormattingEnabled = true;
             this.CboAnio.Items.AddRange(new object[] {
             "",
@@ -410,7 +410,7 @@ namespace CapaPresentacion
             "2008"});
             this.CboAnio.Location = new System.Drawing.Point(340, 72);
             this.CboAnio.Name = "CboAnio";
-            this.CboAnio.Size = new System.Drawing.Size(121, 27);
+            this.CboAnio.Size = new System.Drawing.Size(121, 21);
             this.CboAnio.TabIndex = 40;
             this.CboAnio.Visible = false;
             // 
@@ -418,11 +418,11 @@ namespace CapaPresentacion
             // 
             this.LblAnio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblAnio.AutoSize = true;
-            this.LblAnio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAnio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAnio.ForeColor = System.Drawing.Color.White;
             this.LblAnio.Location = new System.Drawing.Point(293, 80);
             this.LblAnio.Name = "LblAnio";
-            this.LblAnio.Size = new System.Drawing.Size(41, 19);
+            this.LblAnio.Size = new System.Drawing.Size(32, 13);
             this.LblAnio.TabIndex = 39;
             this.LblAnio.Text = "Año:";
             this.LblAnio.Visible = false;
@@ -431,11 +431,11 @@ namespace CapaPresentacion
             // 
             this.RbDirecc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbDirecc.AutoSize = true;
-            this.RbDirecc.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbDirecc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbDirecc.ForeColor = System.Drawing.Color.White;
             this.RbDirecc.Location = new System.Drawing.Point(387, 33);
             this.RbDirecc.Name = "RbDirecc";
-            this.RbDirecc.Size = new System.Drawing.Size(97, 24);
+            this.RbDirecc.Size = new System.Drawing.Size(73, 17);
             this.RbDirecc.TabIndex = 37;
             this.RbDirecc.TabStop = true;
             this.RbDirecc.Text = "Direccion";
@@ -446,11 +446,11 @@ namespace CapaPresentacion
             // 
             this.RbNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbNombre.AutoSize = true;
-            this.RbNombre.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbNombre.ForeColor = System.Drawing.Color.White;
             this.RbNombre.Location = new System.Drawing.Point(274, 33);
             this.RbNombre.Name = "RbNombre";
-            this.RbNombre.Size = new System.Drawing.Size(86, 24);
+            this.RbNombre.Size = new System.Drawing.Size(68, 17);
             this.RbNombre.TabIndex = 36;
             this.RbNombre.TabStop = true;
             this.RbNombre.Text = "Nombre";
@@ -461,11 +461,11 @@ namespace CapaPresentacion
             // 
             this.RbDocu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbDocu.AutoSize = true;
-            this.RbDocu.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbDocu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbDocu.ForeColor = System.Drawing.Color.White;
             this.RbDocu.Location = new System.Drawing.Point(127, 33);
             this.RbDocu.Name = "RbDocu";
-            this.RbDocu.Size = new System.Drawing.Size(110, 24);
+            this.RbDocu.Size = new System.Drawing.Size(86, 17);
             this.RbDocu.TabIndex = 35;
             this.RbDocu.TabStop = true;
             this.RbDocu.Text = "Documento";
@@ -476,11 +476,11 @@ namespace CapaPresentacion
             // 
             this.RbCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbCodigo.AutoSize = true;
-            this.RbCodigo.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbCodigo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbCodigo.ForeColor = System.Drawing.Color.White;
             this.RbCodigo.Location = new System.Drawing.Point(19, 33);
             this.RbCodigo.Name = "RbCodigo";
-            this.RbCodigo.Size = new System.Drawing.Size(77, 24);
+            this.RbCodigo.Size = new System.Drawing.Size(63, 17);
             this.RbCodigo.TabIndex = 34;
             this.RbCodigo.TabStop = true;
             this.RbCodigo.Text = "Codigo";
@@ -491,7 +491,7 @@ namespace CapaPresentacion
             // 
             this.BtnBuscarContribuyente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnBuscarContribuyente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBuscarContribuyente.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarContribuyente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarContribuyente.ForeColor = System.Drawing.Color.Black;
             this.BtnBuscarContribuyente.Location = new System.Drawing.Point(1195, 43);
             this.BtnBuscarContribuyente.Name = "BtnBuscarContribuyente";
@@ -505,11 +505,11 @@ namespace CapaPresentacion
             // 
             this.LblNom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNom.AutoSize = true;
-            this.LblNom.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNom.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNom.ForeColor = System.Drawing.Color.White;
             this.LblNom.Location = new System.Drawing.Point(15, 81);
             this.LblNom.Name = "LblNom";
-            this.LblNom.Size = new System.Drawing.Size(70, 19);
+            this.LblNom.Size = new System.Drawing.Size(53, 13);
             this.LblNom.TabIndex = 57;
             this.LblNom.Text = "Nombre:";
             this.LblNom.Visible = false;
@@ -517,10 +517,10 @@ namespace CapaPresentacion
             // TxtNombre
             // 
             this.TxtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TxtNombre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.Location = new System.Drawing.Point(91, 73);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(290, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(290, 22);
             this.TxtNombre.TabIndex = 62;
             this.TxtNombre.Visible = false;
             // 
@@ -528,11 +528,11 @@ namespace CapaPresentacion
             // 
             this.LblMaterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblMaterno.AutoSize = true;
-            this.LblMaterno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMaterno.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMaterno.ForeColor = System.Drawing.Color.White;
             this.LblMaterno.Location = new System.Drawing.Point(789, 76);
             this.LblMaterno.Name = "LblMaterno";
-            this.LblMaterno.Size = new System.Drawing.Size(133, 19);
+            this.LblMaterno.Size = new System.Drawing.Size(102, 13);
             this.LblMaterno.TabIndex = 64;
             this.LblMaterno.Text = "Apellido Materno:";
             this.LblMaterno.Visible = false;

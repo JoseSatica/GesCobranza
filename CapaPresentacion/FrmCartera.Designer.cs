@@ -79,7 +79,7 @@
             // LblArea
             // 
             this.LblArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblArea.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblArea.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblArea.ForeColor = System.Drawing.Color.White;
             this.LblArea.Location = new System.Drawing.Point(3, 28);
             this.LblArea.Name = "LblArea";
@@ -91,7 +91,7 @@
             // LblUsuarioNom
             // 
             this.LblUsuarioNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUsuarioNom.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsuarioNom.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuarioNom.ForeColor = System.Drawing.Color.White;
             this.LblUsuarioNom.Location = new System.Drawing.Point(3, 9);
             this.LblUsuarioNom.Name = "LblUsuarioNom";
